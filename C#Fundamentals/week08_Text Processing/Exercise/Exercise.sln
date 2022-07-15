@@ -11,11 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task03_Extract File", "task
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task04_Caesar Cipher", "task04_Caesar Cipher\task04_Caesar Cipher.csproj", "{4E2B3DF6-E40F-4CCB-83CD-1CE93EA8D1DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task05_Multiply Big Number", "task05_Multiply Big Number\task05_Multiply Big Number.csproj", "{CCB93AD2-FC5B-446F-B11C-454F053F2FBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task05_Multiply Big Number", "task05_Multiply Big Number\task05_Multiply Big Number.csproj", "{CCB93AD2-FC5B-446F-B11C-454F053F2FBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task06_Replace Repeating Chars", "task06_Replace Repeating Chars\task06_Replace Repeating Chars.csproj", "{63AA1258-A19A-45F4-878E-C261FBA72080}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task06_Replace Repeating Chars", "task06_Replace Repeating Chars\task06_Replace Repeating Chars.csproj", "{63AA1258-A19A-45F4-878E-C261FBA72080}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task07_String Explosion", "task07_String Explosion\task07_String Explosion.csproj", "{4E851901-1A03-4436-81F7-D42EB9A0E710}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task07_String Explosion", "task07_String Explosion\task07_String Explosion.csproj", "{4E851901-1A03-4436-81F7-D42EB9A0E710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task08_Letters Change Numbers", "task08_Letters Change Numbers\task08_Letters Change Numbers.csproj", "{795F7117-2090-404B-B742-AAE3041EB3C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{4E851901-1A03-4436-81F7-D42EB9A0E710}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E851901-1A03-4436-81F7-D42EB9A0E710}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E851901-1A03-4436-81F7-D42EB9A0E710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{795F7117-2090-404B-B742-AAE3041EB3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{795F7117-2090-404B-B742-AAE3041EB3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{795F7117-2090-404B-B742-AAE3041EB3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{795F7117-2090-404B-B742-AAE3041EB3C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
