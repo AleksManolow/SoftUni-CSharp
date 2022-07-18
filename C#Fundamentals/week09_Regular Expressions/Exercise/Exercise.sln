@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Furniture", "task01_Furniture\task01_Furniture.csproj", "{D510881D-7B88-45EB-B3EC-69D299263FFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task01_Furniture", "task01_Furniture\task01_Furniture.csproj", "{D510881D-7B88-45EB-B3EC-69D299263FFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_SoftUni Bar Income", "task03_SoftUni Bar Income\task03_SoftUni Bar Income.csproj", "{45FBD3D2-E153-4DF6-A37C-1589C21E9C68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task03_SoftUni Bar Income", "task03_SoftUni Bar Income\task03_SoftUni Bar Income.csproj", "{45FBD3D2-E153-4DF6-A37C-1589C21E9C68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Race", "task02_Race\task02_Race.csproj", "{3E53C1B7-E593-4894-903E-7561C6EE94B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{45FBD3D2-E153-4DF6-A37C-1589C21E9C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45FBD3D2-E153-4DF6-A37C-1589C21E9C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45FBD3D2-E153-4DF6-A37C-1589C21E9C68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E53C1B7-E593-4894-903E-7561C6EE94B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E53C1B7-E593-4894-903E-7561C6EE94B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E53C1B7-E593-4894-903E-7561C6EE94B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E53C1B7-E593-4894-903E-7561C6EE94B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
