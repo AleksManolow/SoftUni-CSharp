@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exam Preparation-Lab", "Exam Preparation-Lab\Exam Preparation-Lab.csproj", "{187C467E-DDA4-429D-8454-59F79AC7017D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Secret Chat", "task01_Secret Chat\task01_Secret Chat.csproj", "{A0C64CE8-1AB2-4093-B177-0C58AB75E47D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{187C467E-DDA4-429D-8454-59F79AC7017D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{187C467E-DDA4-429D-8454-59F79AC7017D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{187C467E-DDA4-429D-8454-59F79AC7017D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{187C467E-DDA4-429D-8454-59F79AC7017D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0C64CE8-1AB2-4093-B177-0C58AB75E47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C64CE8-1AB2-4093-B177-0C58AB75E47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C64CE8-1AB2-4093-B177-0C58AB75E47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C64CE8-1AB2-4093-B177-0C58AB75E47D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B46FD978-6347-4550-99B5-5FA3894D0110}
+		SolutionGuid = {C2DFE6E4-BAC5-4962-A798-E152891ACAB8}
 	EndGlobalSection
 EndGlobal

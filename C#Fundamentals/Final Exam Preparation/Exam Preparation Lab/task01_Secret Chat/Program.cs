@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Exam_Preparation_Lab
+namespace task01_Secret_Chat
 {
     class Program
     {
@@ -15,7 +15,7 @@ namespace Exam_Preparation_Lab
                 string[] commands = input.Split(":|:");
                 if (commands[0] == "InsertSpace")
                 {
-                    
+
                     text = text.Substring(0, int.Parse(commands[1])) + ' ' + text.Substring(int.Parse(commands[1]));
                 }
                 else if (commands[0] == "Reverse")
@@ -35,7 +35,7 @@ namespace Exam_Preparation_Lab
                         Console.WriteLine("error");
                         isFlag = false;
                     }
-                    
+
                 }
                 else if (commands[0] == "ChangeAll")
                 {
@@ -49,7 +49,7 @@ namespace Exam_Preparation_Lab
                 input = Console.ReadLine();
             }
             Console.WriteLine($"You have a new text message: {text}");
-            
+
         }
     }
 }
