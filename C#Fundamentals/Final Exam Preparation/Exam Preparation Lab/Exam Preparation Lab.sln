@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Secret Chat", "task01_Secret Chat\task01_Secret Chat.csproj", "{A0C64CE8-1AB2-4093-B177-0C58AB75E47D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task01_Secret Chat", "task01_Secret Chat\task01_Secret Chat.csproj", "{A0C64CE8-1AB2-4093-B177-0C58AB75E47D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Mirror Words", "task02_Mirror Words\task02_Mirror Words.csproj", "{1B94ADB2-7E31-4854-BFB4-42968B8155B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A0C64CE8-1AB2-4093-B177-0C58AB75E47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0C64CE8-1AB2-4093-B177-0C58AB75E47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0C64CE8-1AB2-4093-B177-0C58AB75E47D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B94ADB2-7E31-4854-BFB4-42968B8155B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B94ADB2-7E31-4854-BFB4-42968B8155B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B94ADB2-7E31-4854-BFB4-42968B8155B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B94ADB2-7E31-4854-BFB4-42968B8155B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
