@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task06_Supermarket", "task0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task07_Hot Potato", "task07_Hot Potato\task07_Hot Potato.csproj", "{412BAEBB-09D4-4F96-89B6-9DFBF984F928}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task08_Traffic Jam", "task08_Traffic Jam\task08_Traffic Jam.csproj", "{D71BDF78-DD77-4D77-979D-53399FE1C858}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{412BAEBB-09D4-4F96-89B6-9DFBF984F928}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{412BAEBB-09D4-4F96-89B6-9DFBF984F928}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{412BAEBB-09D4-4F96-89B6-9DFBF984F928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D71BDF78-DD77-4D77-979D-53399FE1C858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D71BDF78-DD77-4D77-979D-53399FE1C858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D71BDF78-DD77-4D77-979D-53399FE1C858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D71BDF78-DD77-4D77-979D-53399FE1C858}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
