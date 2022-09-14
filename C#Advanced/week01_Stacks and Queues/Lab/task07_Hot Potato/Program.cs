@@ -18,7 +18,7 @@ namespace task07_Hot_Potato
                 }
                 Console.WriteLine($"Removed {players.Dequeue()}");
             }
-            Console.WriteLine($"Last in {players.Dequeue()}");
+            Console.WriteLine($"Last is {players.Dequeue()}");
         }
     }
 }
