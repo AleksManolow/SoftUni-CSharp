@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task06_Songs Queue", "task0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task07_Truck Tour", "task07_Truck Tour\task07_Truck Tour.csproj", "{EDF99C8A-A2D7-49D4-9759-9F6A9437E13C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task08_Balanced Parentheses", "task08_Balanced Parentheses\task08_Balanced Parentheses.csproj", "{A66B652B-C4AA-4B54-B39A-1E36F49D15E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{EDF99C8A-A2D7-49D4-9759-9F6A9437E13C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDF99C8A-A2D7-49D4-9759-9F6A9437E13C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDF99C8A-A2D7-49D4-9759-9F6A9437E13C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A66B652B-C4AA-4B54-B39A-1E36F49D15E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66B652B-C4AA-4B54-B39A-1E36F49D15E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66B652B-C4AA-4B54-B39A-1E36F49D15E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66B652B-C4AA-4B54-B39A-1E36F49D15E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
