@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task07_Truck Tour", "task07
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task08_Balanced Parentheses", "task08_Balanced Parentheses\task08_Balanced Parentheses.csproj", "{A66B652B-C4AA-4B54-B39A-1E36F49D15E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task09_Simple Text Editor", "task09_Simple Text Editor\task09_Simple Text Editor.csproj", "{82D435A9-C46D-4CBF-89D9-C0EC58B97B65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task09_Simple Text Editor", "task09_Simple Text Editor\task09_Simple Text Editor.csproj", "{82D435A9-C46D-4CBF-89D9-C0EC58B97B65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task10_Crossroads", "task10_Crossroads\task10_Crossroads.csproj", "{8141BCDF-A337-4E84-86D4-D1C0D8D5D5A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{82D435A9-C46D-4CBF-89D9-C0EC58B97B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82D435A9-C46D-4CBF-89D9-C0EC58B97B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82D435A9-C46D-4CBF-89D9-C0EC58B97B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8141BCDF-A337-4E84-86D4-D1C0D8D5D5A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8141BCDF-A337-4E84-86D4-D1C0D8D5D5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8141BCDF-A337-4E84-86D4-D1C0D8D5D5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8141BCDF-A337-4E84-86D4-D1C0D8D5D5A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
