@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Primary Diagonal", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task04_Symbol in Matrix", "task04_Symbol in Matrix\task04_Symbol in Matrix.csproj", "{D8864330-0314-4B46-B7C2-B7FAC8BB95C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task05_Square With Maximum Sum", "task05_Square With Maximum Sum\task05_Square With Maximum Sum.csproj", "{0492B971-0710-4339-BF3D-E2301EE7F97C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D8864330-0314-4B46-B7C2-B7FAC8BB95C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8864330-0314-4B46-B7C2-B7FAC8BB95C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8864330-0314-4B46-B7C2-B7FAC8BB95C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0492B971-0710-4339-BF3D-E2301EE7F97C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0492B971-0710-4339-BF3D-E2301EE7F97C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0492B971-0710-4339-BF3D-E2301EE7F97C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0492B971-0710-4339-BF3D-E2301EE7F97C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
