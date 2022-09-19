@@ -16,29 +16,29 @@ namespace task06_Jagged_Array_Modification
             string[] command = Console.ReadLine().Split(' ');
             while (command[0] != "END")
             {
-                int cordI = int.Parse(command[1]);
-                int cordJ = int.Parse(command[2]);
+                int row = int.Parse(command[1]);
+                int col = int.Parse(command[2]);
                 int value = int.Parse(command[3]);
                 if (command[0] == "Add")
                 {
-                    if (jagggedArr.Length > cordI && jagggedArr[cordI].Length > cordJ && cordI >= 0 && cordJ >= 0)
+                    if (row < 0 || row >= jagggedArr.Length || col < 0 || col >= jagggedArr[row].Length)
                     {
-                        jagggedArr[cordI][cordJ] += value;
+                        Console.WriteLine("Invalid coordinates");
                     }
                     else
                     {
-                        Console.WriteLine("Invalid coordinates");
+                        jagggedArr[row][col] += value;
                     }
                 }
                 else if (command[0] == "Subtract")
                 {
-                    if (jagggedArr.Length > cordI && jagggedArr[cordI].Length > cordJ && cordI >=0 && cordJ >=0)
+                    if (row < 0 || row >= jagggedArr.Length || col < 0 || col >= jagggedArr[row].Length)
                     {
-                        jagggedArr[cordI][cordJ] -= value;
+                        Console.WriteLine("Invalid coordinates");
                     }
                     else
                     {
-                        Console.WriteLine("Invalid coordinates");
+                        jagggedArr[row][col] -= value;
                     }
                 }   
 
