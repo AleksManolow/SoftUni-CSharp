@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Count Same Values in
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Average Student Grades", "task02_Average Student Grades\task02_Average Student Grades.csproj", "{3CD9E03A-A3D1-4576-89AA-6DC07FA7B8D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_3. Largest 3 Numbers", "task03_3. Largest 3 Numbers\task03_3. Largest 3 Numbers.csproj", "{02E28CFA-7BE4-4D29-B7F7-64658F982B75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Largest 3 Numbers", "task03_3. Largest 3 Numbers\task03_Largest 3 Numbers.csproj", "{02E28CFA-7BE4-4D29-B7F7-64658F982B75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
