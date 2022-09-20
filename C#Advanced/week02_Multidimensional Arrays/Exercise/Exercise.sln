@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task07_Knight Game", "task0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task08_Bombs", "task08_Bombs\task08_Bombs.csproj", "{613C8429-FD64-4BBC-B916-9535B1221D9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task09_Miner", "task09_Miner\task09_Miner.csproj", "{436A7195-CAB7-4935-8CE7-A92C1B81C33C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{613C8429-FD64-4BBC-B916-9535B1221D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{613C8429-FD64-4BBC-B916-9535B1221D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{613C8429-FD64-4BBC-B916-9535B1221D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{436A7195-CAB7-4935-8CE7-A92C1B81C33C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{436A7195-CAB7-4935-8CE7-A92C1B81C33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{436A7195-CAB7-4935-8CE7-A92C1B81C33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{436A7195-CAB7-4935-8CE7-A92C1B81C33C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
