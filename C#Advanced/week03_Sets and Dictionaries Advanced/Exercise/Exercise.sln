@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Unique Usernames", "task01_Unique Usernames\task01_Unique Usernames.csproj", "{52E2DAC4-8F35-4749-A5D1-5123B5775145}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Sets of Elements", "task02_Sets of Elements\task02_Sets of Elements.csproj", "{30A5FF9B-B4C5-475B-8057-93BAE50582C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{52E2DAC4-8F35-4749-A5D1-5123B5775145}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52E2DAC4-8F35-4749-A5D1-5123B5775145}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52E2DAC4-8F35-4749-A5D1-5123B5775145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30A5FF9B-B4C5-475B-8057-93BAE50582C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A5FF9B-B4C5-475B-8057-93BAE50582C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A5FF9B-B4C5-475B-8057-93BAE50582C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A5FF9B-B4C5-475B-8057-93BAE50582C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
