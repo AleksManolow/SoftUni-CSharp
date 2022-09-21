@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Count Same Values in Array", "task01_Count Same Values in Array\task01_Count Same Values in Array.csproj", "{DDC89273-CF88-4D21-8033-8496468957E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task01_Count Same Values in Array", "task01_Count Same Values in Array\task01_Count Same Values in Array.csproj", "{DDC89273-CF88-4D21-8033-8496468957E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Average Student Grades", "task02_Average Student Grades\task02_Average Student Grades.csproj", "{3CD9E03A-A3D1-4576-89AA-6DC07FA7B8D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task02_Average Student Grades", "task02_Average Student Grades\task02_Average Student Grades.csproj", "{3CD9E03A-A3D1-4576-89AA-6DC07FA7B8D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Largest 3 Numbers", "task03_3. Largest 3 Numbers\task03_Largest 3 Numbers.csproj", "{02E28CFA-7BE4-4D29-B7F7-64658F982B75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task03_Largest 3 Numbers", "task03_3. Largest 3 Numbers\task03_Largest 3 Numbers.csproj", "{02E28CFA-7BE4-4D29-B7F7-64658F982B75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task04_Product Shop", "task04_Product Shop\task04_Product Shop.csproj", "{15A4E901-4587-4D35-80EB-DD7D23C77B9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task04_Product Shop", "task04_Product Shop\task04_Product Shop.csproj", "{15A4E901-4587-4D35-80EB-DD7D23C77B9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task05_Cities by Continent and Country", "task05_Cities by Continent and Country\task05_Cities by Continent and Country.csproj", "{E8F5C613-5D5C-4254-97E2-674B4B22E827}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task05_Cities by Continent and Country", "task05_Cities by Continent and Country\task05_Cities by Continent and Country.csproj", "{E8F5C613-5D5C-4254-97E2-674B4B22E827}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task06_Record Unique Names", "task06_Record Unique Names\task06_Record Unique Names.csproj", "{D376BA3E-10FE-4F71-938E-4955CF30BB2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task06_Record Unique Names", "task06_Record Unique Names\task06_Record Unique Names.csproj", "{D376BA3E-10FE-4F71-938E-4955CF30BB2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task07_Parking Lot", "task07_Parking Lot\task07_Parking Lot.csproj", "{DB6683F4-733A-4F59-A7CE-C94E7862B55E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D376BA3E-10FE-4F71-938E-4955CF30BB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D376BA3E-10FE-4F71-938E-4955CF30BB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D376BA3E-10FE-4F71-938E-4955CF30BB2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB6683F4-733A-4F59-A7CE-C94E7862B55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB6683F4-733A-4F59-A7CE-C94E7862B55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB6683F4-733A-4F59-A7CE-C94E7862B55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB6683F4-733A-4F59-A7CE-C94E7862B55E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
