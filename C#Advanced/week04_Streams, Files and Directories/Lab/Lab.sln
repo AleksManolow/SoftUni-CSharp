@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task05_Extract Special Byte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task06_Split, Merge Binary Files", "task06_Split, Merge Binary Files\task06_Split, Merge Binary Files.csproj", "{4020D7A1-5F37-4520-BDCD-B245D6789994}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task07_Folder Size", "task07_Folder Size\task07_Folder Size.csproj", "{DCD2DD88-F006-44DB-88E3-6B0F3E1849D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{4020D7A1-5F37-4520-BDCD-B245D6789994}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4020D7A1-5F37-4520-BDCD-B245D6789994}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4020D7A1-5F37-4520-BDCD-B245D6789994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCD2DD88-F006-44DB-88E3-6B0F3E1849D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD2DD88-F006-44DB-88E3-6B0F3E1849D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD2DD88-F006-44DB-88E3-6B0F3E1849D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD2DD88-F006-44DB-88E3-6B0F3E1849D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
