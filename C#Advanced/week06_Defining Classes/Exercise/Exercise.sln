@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task06_Speed Racing", "task
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task07_Raw Data", "task07_Raw Data\task07_Raw Data.csproj", "{47EA2CDE-C046-41E9-8552-DEEE822D1FF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task08_Car Salesman", "task08_Car Salesman\task08_Car Salesman.csproj", "{EB4240D9-3C71-4234-BC6C-AAE36DC1A67C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task08_Car Salesman", "task08_Car Salesman\task08_Car Salesman.csproj", "{EB4240D9-3C71-4234-BC6C-AAE36DC1A67C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task09_Pokemon Trainer", "task09_Pokemon Trainer\task09_Pokemon Trainer.csproj", "{A5D4FB7B-C610-428B-BD53-A5CB08D09632}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task09_Pokemon Trainer", "task09_Pokemon Trainer\task09_Pokemon Trainer.csproj", "{A5D4FB7B-C610-428B-BD53-A5CB08D09632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task10_SoftUni Parking", "task10_SoftUni Parking\task10_SoftUni Parking.csproj", "{46DDEE79-F3A6-423D-82A2-83D4815A75F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{A5D4FB7B-C610-428B-BD53-A5CB08D09632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5D4FB7B-C610-428B-BD53-A5CB08D09632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5D4FB7B-C610-428B-BD53-A5CB08D09632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46DDEE79-F3A6-423D-82A2-83D4815A75F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46DDEE79-F3A6-423D-82A2-83D4815A75F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46DDEE79-F3A6-423D-82A2-83D4815A75F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46DDEE79-F3A6-423D-82A2-83D4815A75F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
