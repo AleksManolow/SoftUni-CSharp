@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task05_Generic Count Method
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task06_Generic Count Method Doubles", "task06_Generic Count Method Doubles\task06_Generic Count Method Doubles.csproj", "{14546E5B-42CA-4A57-948F-20343F45380F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task07_Tuple", "task07_Tuple\task07_Tuple.csproj", "{5CB696DE-2CDB-4B50-B6B3-0F84D2CDEBAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{14546E5B-42CA-4A57-948F-20343F45380F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14546E5B-42CA-4A57-948F-20343F45380F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14546E5B-42CA-4A57-948F-20343F45380F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CB696DE-2CDB-4B50-B6B3-0F84D2CDEBAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB696DE-2CDB-4B50-B6B3-0F84D2CDEBAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB696DE-2CDB-4B50-B6B3-0F84D2CDEBAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB696DE-2CDB-4B50-B6B3-0F84D2CDEBAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
