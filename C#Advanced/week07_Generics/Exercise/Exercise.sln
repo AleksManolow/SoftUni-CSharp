@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Generic Box of String", "task01_Generic Box of String\task01_Generic Box of String.csproj", "{A84DB95A-EEBC-4848-A9CB-1D1DCFC26446}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A84DB95A-EEBC-4848-A9CB-1D1DCFC26446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A84DB95A-EEBC-4848-A9CB-1D1DCFC26446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A84DB95A-EEBC-4848-A9CB-1D1DCFC26446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A84DB95A-EEBC-4848-A9CB-1D1DCFC26446}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0745658B-DE0B-4074-B0FE-15AD39E38F2B}
+	EndGlobalSection
+EndGlobal
