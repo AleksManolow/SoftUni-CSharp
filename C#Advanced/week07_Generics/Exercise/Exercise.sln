@@ -5,9 +5,11 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task01_Generic Box of String", "task01_Generic Box of String\task01_Generic Box of String.csproj", "{A84DB95A-EEBC-4848-A9CB-1D1DCFC26446}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Generic Box of Integer", "task02_Generic Box of Integer\task02_Generic Box of Integer.csproj", "{30EBFB96-2706-4E5B-9481-AE7D9D02C9F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task02_Generic Box of Integer", "task02_Generic Box of Integer\task02_Generic Box of Integer.csproj", "{30EBFB96-2706-4E5B-9481-AE7D9D02C9F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Generic Swap Method String", "task03_Generic Swap Method String\task03_Generic Swap Method String.csproj", "{435B34CD-1DD3-4C7B-8B0A-59E27BB619AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task03_Generic Swap Method String", "task03_Generic Swap Method String\task03_Generic Swap Method String.csproj", "{435B34CD-1DD3-4C7B-8B0A-59E27BB619AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task04_Generic Swap Method Integer", "task04_Generic Swap Method Integer\task04_Generic Swap Method Integer.csproj", "{666ED41C-29D0-450D-A43D-2837C6723D1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{435B34CD-1DD3-4C7B-8B0A-59E27BB619AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{435B34CD-1DD3-4C7B-8B0A-59E27BB619AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{435B34CD-1DD3-4C7B-8B0A-59E27BB619AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{666ED41C-29D0-450D-A43D-2837C6723D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{666ED41C-29D0-450D-A43D-2837C6723D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{666ED41C-29D0-450D-A43D-2837C6723D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{666ED41C-29D0-450D-A43D-2837C6723D1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
