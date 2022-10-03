@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_ListyIterator", "task01_ListyIterator\task01_ListyIterator.csproj", "{5C12FF69-5A38-423D-B579-CC34C17E3848}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Collection", "task02_Collection\task02_Collection.csproj", "{901BE6AB-31A1-4BEE-9525-3CD3C6014210}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5C12FF69-5A38-423D-B579-CC34C17E3848}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C12FF69-5A38-423D-B579-CC34C17E3848}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C12FF69-5A38-423D-B579-CC34C17E3848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{901BE6AB-31A1-4BEE-9525-3CD3C6014210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{901BE6AB-31A1-4BEE-9525-3CD3C6014210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{901BE6AB-31A1-4BEE-9525-3CD3C6014210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{901BE6AB-31A1-4BEE-9525-3CD3C6014210}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
