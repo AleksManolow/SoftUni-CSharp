@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_ListyIterator", "task01_ListyIterator\task01_ListyIterator.csproj", "{5C12FF69-5A38-423D-B579-CC34C17E3848}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task01_ListyIterator", "task01_ListyIterator\task01_ListyIterator.csproj", "{5C12FF69-5A38-423D-B579-CC34C17E3848}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Collection", "task02_Collection\task02_Collection.csproj", "{901BE6AB-31A1-4BEE-9525-3CD3C6014210}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task02_Collection", "task02_Collection\task02_Collection.csproj", "{901BE6AB-31A1-4BEE-9525-3CD3C6014210}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Stack", "task03_Stack\task03_Stack.csproj", "{CB381777-7B1C-4127-97BF-9F415F9D867D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task03_Stack", "task03_Stack\task03_Stack.csproj", "{CB381777-7B1C-4127-97BF-9F415F9D867D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task04_Froggy", "task04_Froggy\task04_Froggy.csproj", "{61A331CF-0862-479E-AF13-475FE94EE411}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task04_Froggy", "task04_Froggy\task04_Froggy.csproj", "{61A331CF-0862-479E-AF13-475FE94EE411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task05_ComparingObjects", "task05_ComparingObjects\task05_ComparingObjects.csproj", "{BDBC705E-D3F1-401B-963E-62CA256D3F4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{61A331CF-0862-479E-AF13-475FE94EE411}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61A331CF-0862-479E-AF13-475FE94EE411}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61A331CF-0862-479E-AF13-475FE94EE411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDBC705E-D3F1-401B-963E-62CA256D3F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDBC705E-D3F1-401B-963E-62CA256D3F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDBC705E-D3F1-401B-963E-62CA256D3F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDBC705E-D3F1-401B-963E-62CA256D3F4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
