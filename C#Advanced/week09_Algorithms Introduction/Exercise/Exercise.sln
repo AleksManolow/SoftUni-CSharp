@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Recursive Array Sum"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Recursive Factorial", "task02_Recursive Factorial\task02_Recursive Factorial.csproj", "{42467E61-C3B7-4511-9549-A662A491EDF5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Sum of Coins", "task03_Sum of Coins\task03_Sum of Coins.csproj", "{CD79AB5A-0887-4510-8E8E-94B6CF4A073C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{42467E61-C3B7-4511-9549-A662A491EDF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42467E61-C3B7-4511-9549-A662A491EDF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42467E61-C3B7-4511-9549-A662A491EDF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD79AB5A-0887-4510-8E8E-94B6CF4A073C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD79AB5A-0887-4510-8E8E-94B6CF4A073C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD79AB5A-0887-4510-8E8E-94B6CF4A073C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD79AB5A-0887-4510-8E8E-94B6CF4A073C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
