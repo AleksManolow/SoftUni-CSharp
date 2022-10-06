@@ -5,6 +5,7 @@
 ***
 <details>
 <summary><h3>Basics Carriculum List</summary>
+
 1. [**First Steps In Coding**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Basic/week01_First%20steps%20in%20programming)
 2. [**Conditional Statements**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Basic/week02_Checks)
 3. [**Nested Conditional Statements**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Basic/week03_More%20complex%20checks)
@@ -16,6 +17,7 @@
 ***
  <details>
  <summary><h3>Fundamentals Carriculum List</summary>
+ 
 1. [**Basic Syntax, Conditional Statements and Loops**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Fundamentals/week01_Basic%20Syntax%2C%20Conditional%20Statements%20and%20Loops)
 2. [**Data Types and Variables**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Fundamentals/week02_Data%20Types%20and%20Variables)
 3. [**Arrays**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Fundamentals/week03_Arrays)
@@ -30,6 +32,7 @@
 ***
  <details>
  <summary><h3>Advanced Carriculum List</summary>
+ 
 1. [**Stacks and Queues**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week01_Stacks%20and%20Queues)
 2. [**Multidimentional Arrays**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week02_Multidimensional%20Arrays)
 3. [**Sets and Dictionaries**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week03_Sets%20and%20Dictionaries%20Advanced)
@@ -40,7 +43,8 @@
 8. [**Iterators and Comparators**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week08_Iterators%20and%20Comparators)
 9. [**Algorithms Introduction**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week09_Algorithms%20Introduction)
   </details>
-  
+    
+***
  <details>
  <summary><h3>Exam Practice Problems</summary>
   
