@@ -36,7 +36,7 @@
 1. [**Stacks and Queues**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week01_Stacks%20and%20Queues)
 2. [**Multidimentional Arrays**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week02_Multidimensional%20Arrays)
 3. [**Sets and Dictionaries**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week03_Sets%20and%20Dictionaries%20Advanced)
-4. [**Streams, Files and Directories**]https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week04_Streams%2C%20Files%20and%20Directories)
+4. [**Streams, Files and Directories**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week04_Streams%2C%20Files%20and%20Directories)
 5. [**Functional Programming**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week05_Functional%20Programming)
 6. [**Defining Classes**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week06_Defining%20Classes)
 7. [**Generics**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week07_Generics)
@@ -57,6 +57,7 @@ Here you can find exam problems I used for practice:
 ***
  <details>
  <summary><h3>Exams</summary>
+  
  1. [**Basics**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Basic/Exam)
  2. [**Fundamentals**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Fundamentals/Final%20Exam)
  </details>
