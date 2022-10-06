@@ -2,6 +2,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=SoftUni-Courses&fontSize=90" />
 <h2>Courses I've completed during my studies at @SoftUni</h2>
 <em>Here you can find problem solutions from the following lectures:</em>
+
 ***
 <details>
 <summary><h3>Basics Carriculum List</summary>
