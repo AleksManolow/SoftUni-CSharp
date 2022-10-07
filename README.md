@@ -51,7 +51,7 @@
   
 Here you can find exam problems I used for practice:
 1. [**Basics**]()
-2. [**Fundamentals**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Fundamentals/Final%20Exam%20Preparation) 
+2. [**Fundamentals**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Fundamentals/Exam%20Preparation) 
 3. [**Advanced**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/Exam%20Preparations)
   </details>
   
@@ -60,5 +60,7 @@ Here you can find exam problems I used for practice:
  <summary><h3>Exams</summary>
   
  1. [**Basics**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Basic/Exam)
- 2. [**Fundamentals**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Fundamentals/Final%20Exam)
+ 2. [**Fundamentals**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Fundamentals/Exam)
  </details>
+ 
+ ***
