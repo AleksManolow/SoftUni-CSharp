@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Single Inheritance",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Multiple Inheritance", "task02_Multiple Inheritance\task02_Multiple Inheritance.csproj", "{8F7392C4-05E9-407F-8FF9-AC55F63E5945}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Hierarchical Inheritance", "task03_Hierarchical Inheritance\task03_Hierarchical Inheritance.csproj", "{DD5CDF84-0033-4106-AE0D-D082BAC61D79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8F7392C4-05E9-407F-8FF9-AC55F63E5945}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F7392C4-05E9-407F-8FF9-AC55F63E5945}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F7392C4-05E9-407F-8FF9-AC55F63E5945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD5CDF84-0033-4106-AE0D-D082BAC61D79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD5CDF84-0033-4106-AE0D-D082BAC61D79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD5CDF84-0033-4106-AE0D-D082BAC61D79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD5CDF84-0033-4106-AE0D-D082BAC61D79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
