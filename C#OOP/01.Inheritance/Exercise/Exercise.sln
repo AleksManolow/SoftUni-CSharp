@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task03_Players and Monsters
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task04_Need for Speed", "task04_Need for Speed\task04_Need for Speed.csproj", "{F04887A3-8525-4C4F-99A7-1CFDE9595EFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task05_Restaurant", "task05_Restaurant\task05_Restaurant.csproj", "{BCCEC4E8-0966-4A98-826C-A03BF16F16AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task05_Restaurant", "task05_Restaurant\task05_Restaurant.csproj", "{BCCEC4E8-0966-4A98-826C-A03BF16F16AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task06_Animals", "task06_Animals\task06_Animals.csproj", "{C38E9288-E895-49BB-918D-0477D1D5ED3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{BCCEC4E8-0966-4A98-826C-A03BF16F16AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCCEC4E8-0966-4A98-826C-A03BF16F16AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCCEC4E8-0966-4A98-826C-A03BF16F16AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C38E9288-E895-49BB-918D-0477D1D5ED3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C38E9288-E895-49BB-918D-0477D1D5ED3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C38E9288-E895-49BB-918D-0477D1D5ED3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C38E9288-E895-49BB-918D-0477D1D5ED3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
