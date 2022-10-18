@@ -11,25 +11,26 @@ namespace Renovators
         private readonly List<Renovator> renovators;
 
         public string Name { get; set; }
-        public int NeededRenovatorsperty { get; set; }
-        public string Project { get; set; }
-        public int Count => renovators.Count;
 
-        public  Catalog(string name, int neededRenovatorsperty, string project)
+        public int NeededRenovators { get; set; }
+
+        public string Project { get; set; }
+
+        public int Count => renovators.Count;
+        public Catalog(string name, int neededRenovators, string project)
         {
             Name = name;
-            NeededRenovatorsperty = neededRenovatorsperty;
+            NeededRenovators = neededRenovators;
             Project = project;
-            renovators = new List<Renovator>();
+            renovators = new List<Renovator>(neededRenovators);
         }
-
         public string AddRenovator(Renovator renovator)
         {
             if (string.IsNullOrEmpty(renovator.Name) || string.IsNullOrEmpty(renovator.Type))
             {
                 return "Invalid renovator's information.";
             }
-            else if (Count == NeededRenovatorsperty)
+            else if (Count == NeededRenovators)
             {
                 return "Renovators are no more needed.";
             }
@@ -48,7 +49,9 @@ namespace Renovators
             if (renovatorToRemove == null) return false;
             renovators.Remove(renovatorToRemove);
             return true;
+
         }
+
         public int RemoveRenovatorBySpecialty(string type)
         {
             return renovators.RemoveAll(r => r.Type == type);
@@ -66,17 +69,20 @@ namespace Renovators
 
         public List<Renovator> PayRenovators(int days)
         {
-            return renovators.FindAll(x => x.Days >= days).ToList();
+            return renovators.FindAll(r => r.Days >= days).ToList();
         }
         public string Report()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Renovators available for Project {Project}:");
-            foreach (var item in renovators.Where(r => r.Hired == false))
+            StringBuilder output = new StringBuilder();
+
+            output.AppendLine($"Renovators available for Project {Project}:");
+
+            foreach (var renovator in renovators.Where(r => r.Hired == false))
             {
-                sb.AppendLine(item.ToString());
+                output.AppendLine(renovator.ToString());
             }
-            return sb.ToString().TrimEnd();
+
+            return output.ToString().TrimEnd();
         }
     }
 }
