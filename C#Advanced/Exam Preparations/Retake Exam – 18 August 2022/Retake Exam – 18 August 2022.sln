@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Barista Contest", "task01_Barista Contest\task01_Barista Contest.csproj", "{CED8C4A3-F6F5-45C3-A7A9-FF7E8A2FA15D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Help-A-Mole", "task02_Help-A-Mole\task02_Help-A-Mole.csproj", "{1ADAA3B0-3614-4A55-B837-788E2B2769B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CED8C4A3-F6F5-45C3-A7A9-FF7E8A2FA15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CED8C4A3-F6F5-45C3-A7A9-FF7E8A2FA15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CED8C4A3-F6F5-45C3-A7A9-FF7E8A2FA15D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ADAA3B0-3614-4A55-B837-788E2B2769B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ADAA3B0-3614-4A55-B837-788E2B2769B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ADAA3B0-3614-4A55-B837-788E2B2769B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ADAA3B0-3614-4A55-B837-788E2B2769B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
