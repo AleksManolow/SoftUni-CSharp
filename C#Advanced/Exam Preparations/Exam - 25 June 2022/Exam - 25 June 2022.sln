@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task01_Tiles Master", "task01_Tiles Master\task01_Tiles Master.csproj", "{D88BFFC2-9CF9-40A4-9BE8-4DBFF5115AD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Wall Destroyer", "task02_Wall Destroyer\task02_Wall Destroyer.csproj", "{4A34FDD3-4263-42E3-9D09-5FBEA9B37E1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task02_Wall Destroyer", "task02_Wall Destroyer\task02_Wall Destroyer.csproj", "{4A34FDD3-4263-42E3-9D09-5FBEA9B37E1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Renovators", "task03_Renovators\task03_Renovators.csproj", "{FB40337A-C852-4DA3-940C-A4ACC3D79BCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4A34FDD3-4263-42E3-9D09-5FBEA9B37E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A34FDD3-4263-42E3-9D09-5FBEA9B37E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A34FDD3-4263-42E3-9D09-5FBEA9B37E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB40337A-C852-4DA3-940C-A4ACC3D79BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB40337A-C852-4DA3-940C-A4ACC3D79BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB40337A-C852-4DA3-940C-A4ACC3D79BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB40337A-C852-4DA3-940C-A4ACC3D79BCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
