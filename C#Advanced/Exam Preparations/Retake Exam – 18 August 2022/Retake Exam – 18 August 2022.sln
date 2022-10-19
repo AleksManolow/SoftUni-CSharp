@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Barista Contest", "task01_Barista Contest\task01_Barista Contest.csproj", "{CED8C4A3-F6F5-45C3-A7A9-FF7E8A2FA15D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task01_Barista Contest", "task01_Barista Contest\task01_Barista Contest.csproj", "{CED8C4A3-F6F5-45C3-A7A9-FF7E8A2FA15D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Help-A-Mole", "task02_Help-A-Mole\task02_Help-A-Mole.csproj", "{1ADAA3B0-3614-4A55-B837-788E2B2769B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task02_Help-A-Mole", "task02_Help-A-Mole\task02_Help-A-Mole.csproj", "{1ADAA3B0-3614-4A55-B837-788E2B2769B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Basketball", "task03_Basketball\task03_Basketball.csproj", "{7E81B485-9020-4627-9754-5DE8666FC2AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1ADAA3B0-3614-4A55-B837-788E2B2769B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ADAA3B0-3614-4A55-B837-788E2B2769B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ADAA3B0-3614-4A55-B837-788E2B2769B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E81B485-9020-4627-9754-5DE8666FC2AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E81B485-9020-4627-9754-5DE8666FC2AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E81B485-9020-4627-9754-5DE8666FC2AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E81B485-9020-4627-9754-5DE8666FC2AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
