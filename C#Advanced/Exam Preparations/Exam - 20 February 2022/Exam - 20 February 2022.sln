@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Bakery Shop", "task01_Bakery Shop\task01_Bakery Shop.csproj", "{5AA5223D-AE3F-430A-9928-7422E9EEAB3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task01_Bakery Shop", "task01_Bakery Shop\task01_Bakery Shop.csproj", "{5AA5223D-AE3F-430A-9928-7422E9EEAB3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Beaver at Work", "task02_Beaver at Work\task02_Beaver at Work.csproj", "{84D33D8D-6DC0-4578-B283-591A4D8DF4F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5AA5223D-AE3F-430A-9928-7422E9EEAB3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AA5223D-AE3F-430A-9928-7422E9EEAB3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AA5223D-AE3F-430A-9928-7422E9EEAB3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84D33D8D-6DC0-4578-B283-591A4D8DF4F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84D33D8D-6DC0-4578-B283-591A4D8DF4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84D33D8D-6DC0-4578-B283-591A4D8DF4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84D33D8D-6DC0-4578-B283-591A4D8DF4F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
