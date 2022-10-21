@@ -51,7 +51,7 @@ namespace FishingNet
         }
         public Fish GetBiggestFish()
         {
-            return this.Fish.SingleOrDefault(x => x.Weight == this.Fish.Max(x => x.Weight));
+            return this.Fish.OrderByDescending(fish => fish.Length).First();
         }
         public string Report()
         {
@@ -62,7 +62,7 @@ namespace FishingNet
                 sb.AppendLine(Fish[i].ToString());
             }
             sb.Append(Fish[Count - 1]).ToString();
-            return sb.ToString();
+            return sb.ToString().TrimEnd();
         }
 
     }
