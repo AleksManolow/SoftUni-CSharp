@@ -5,11 +5,13 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task01_Class Box Data", "task01_Class Box Data\task01_Class Box Data.csproj", "{C8C46ABC-1230-40B6-9FBB-805778605819}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Animal Farm", "task02_Animal Farm\task02_Animal Farm.csproj", "{E3EC280B-3B81-416E-AA4F-0182B83D631A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task02_Animal Farm", "task02_Animal Farm\task02_Animal Farm.csproj", "{E3EC280B-3B81-416E-AA4F-0182B83D631A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Shopping Spree", "task03_Shopping Spree\task03_Shopping Spree.csproj", "{DFCB9B3C-3FC9-49D6-9DAA-C219226EDED5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task03_Shopping Spree", "task03_Shopping Spree\task03_Shopping Spree.csproj", "{DFCB9B3C-3FC9-49D6-9DAA-C219226EDED5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task04_Pizza Calories", "task04_Pizza Calories\task04_Pizza Calories.csproj", "{A30D7D2F-AAD8-4FDF-8E2E-BBFA41F7BA26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task04_Pizza Calories", "task04_Pizza Calories\task04_Pizza Calories.csproj", "{A30D7D2F-AAD8-4FDF-8E2E-BBFA41F7BA26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task05_Football Team Generator", "task05_Football Team Generator\task05_Football Team Generator.csproj", "{C6AA26C4-6031-4986-8292-B4CC4BD671E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A30D7D2F-AAD8-4FDF-8E2E-BBFA41F7BA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A30D7D2F-AAD8-4FDF-8E2E-BBFA41F7BA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A30D7D2F-AAD8-4FDF-8E2E-BBFA41F7BA26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6AA26C4-6031-4986-8292-B4CC4BD671E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6AA26C4-6031-4986-8292-B4CC4BD671E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6AA26C4-6031-4986-8292-B4CC4BD671E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6AA26C4-6031-4986-8292-B4CC4BD671E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
