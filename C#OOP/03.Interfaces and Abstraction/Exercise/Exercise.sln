@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Define an Interface 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Multiple Implementation", "task02_Multiple Implementation\task02_Multiple Implementation.csproj", "{4051C061-5071-47B5-A271-7034DF941B0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Telephony", "task03_Telephony\task03_Telephony.csproj", "{68B57E0C-112D-41B8-8858-6AF0226DE4BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4051C061-5071-47B5-A271-7034DF941B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4051C061-5071-47B5-A271-7034DF941B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4051C061-5071-47B5-A271-7034DF941B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B57E0C-112D-41B8-8858-6AF0226DE4BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B57E0C-112D-41B8-8858-6AF0226DE4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B57E0C-112D-41B8-8858-6AF0226DE4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B57E0C-112D-41B8-8858-6AF0226DE4BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
