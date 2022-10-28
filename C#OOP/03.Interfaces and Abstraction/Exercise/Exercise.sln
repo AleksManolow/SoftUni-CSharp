@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Define an Interface IPerson", "task01_Define an Interface IPerson\task01_Define an Interface IPerson.csproj", "{48A3EAFB-1711-4177-809D-668932B5FF95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task01_Define an Interface IPerson", "task01_Define an Interface IPerson\task01_Define an Interface IPerson.csproj", "{48A3EAFB-1711-4177-809D-668932B5FF95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Multiple Implementation", "task02_Multiple Implementation\task02_Multiple Implementation.csproj", "{4051C061-5071-47B5-A271-7034DF941B0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task02_Multiple Implementation", "task02_Multiple Implementation\task02_Multiple Implementation.csproj", "{4051C061-5071-47B5-A271-7034DF941B0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Telephony", "task03_Telephony\task03_Telephony.csproj", "{68B57E0C-112D-41B8-8858-6AF0226DE4BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task03_Telephony", "task03_Telephony\task03_Telephony.csproj", "{68B57E0C-112D-41B8-8858-6AF0226DE4BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task04_Border Control", "task04_Border Control\task04_Border Control.csproj", "{1AD904DE-8DD1-4712-8D93-358E81C20D04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task04_Border Control", "task04_Border Control\task04_Border Control.csproj", "{1AD904DE-8DD1-4712-8D93-358E81C20D04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task05_Birthday Celebrations", "task05_Birthday Celebrations\task05_Birthday Celebrations.csproj", "{52A0A39F-8EAF-4182-BAA2-82A67027216C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task05_Birthday Celebrations", "task05_Birthday Celebrations\task05_Birthday Celebrations.csproj", "{52A0A39F-8EAF-4182-BAA2-82A67027216C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task06_Food Shortage", "task06_Food Shortage\task06_Food Shortage.csproj", "{B3EB9412-D2CE-47DC-8E08-1E6A7DB2F663}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task06_Food Shortage", "task06_Food Shortage\task06_Food Shortage.csproj", "{B3EB9412-D2CE-47DC-8E08-1E6A7DB2F663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task07_Military Elite", "task07_Military Elite\task07_Military Elite.csproj", "{520E1A60-42E3-4F67-BCA0-E32379EDD6FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{B3EB9412-D2CE-47DC-8E08-1E6A7DB2F663}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3EB9412-D2CE-47DC-8E08-1E6A7DB2F663}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3EB9412-D2CE-47DC-8E08-1E6A7DB2F663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{520E1A60-42E3-4F67-BCA0-E32379EDD6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{520E1A60-42E3-4F67-BCA0-E32379EDD6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{520E1A60-42E3-4F67-BCA0-E32379EDD6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{520E1A60-42E3-4F67-BCA0-E32379EDD6FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
