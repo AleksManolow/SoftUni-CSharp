@@ -16,6 +16,6 @@ namespace task07_Military_Elite.Model
         public decimal Salary { get; set; }
 
         public override string ToString()
-        => $"Name: {this.FirstName} {this.LastName} Id: {this.Id} Salary: {this.Salary}";
+        => $"Name: {this.FirstName} {this.LastName} Id: {this.Id} Salary: {this.Salary:F2}";
     }
 }
