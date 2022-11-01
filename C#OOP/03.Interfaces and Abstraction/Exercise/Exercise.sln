@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task07_Military Elite", "ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task08_Collection Hierarchy", "task08_Collection Hierarchy\task08_Collection Hierarchy.csproj", "{05B653CE-9925-496B-96C0-372B9A5227F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task09_Explicit Interfaces", "task09_Explicit Interfaces\task09_Explicit Interfaces.csproj", "{FBCA36F4-DCDE-48FF-B606-34F07B7779FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{05B653CE-9925-496B-96C0-372B9A5227F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05B653CE-9925-496B-96C0-372B9A5227F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05B653CE-9925-496B-96C0-372B9A5227F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBCA36F4-DCDE-48FF-B606-34F07B7779FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBCA36F4-DCDE-48FF-B606-34F07B7779FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBCA36F4-DCDE-48FF-B606-34F07B7779FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBCA36F4-DCDE-48FF-B606-34F07B7779FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
