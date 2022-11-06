@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task01_Square Root", "task01_Square Root\task01_Square Root.csproj", "{177C46B2-CBBF-4A03-838E-CB69048A6F29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task01_Square Root", "task01_Square Root\task01_Square Root.csproj", "{177C46B2-CBBF-4A03-838E-CB69048A6F29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Enter Numbers", "task02_Enter Numbers\task02_Enter Numbers.csproj", "{ACD95C89-9983-4597-A3D8-DFE7950CACAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task02_Enter Numbers", "task02_Enter Numbers\task02_Enter Numbers.csproj", "{ACD95C89-9983-4597-A3D8-DFE7950CACAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Cards", "task03_Cards\task03_Cards.csproj", "{D8D4656E-30B3-4F13-BF0E-B625E40372E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{ACD95C89-9983-4597-A3D8-DFE7950CACAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACD95C89-9983-4597-A3D8-DFE7950CACAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACD95C89-9983-4597-A3D8-DFE7950CACAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D4656E-30B3-4F13-BF0E-B625E40372E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D4656E-30B3-4F13-BF0E-B625E40372E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D4656E-30B3-4F13-BF0E-B625E40372E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D4656E-30B3-4F13-BF0E-B625E40372E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
