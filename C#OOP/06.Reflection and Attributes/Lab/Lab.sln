@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task03_Mission Private Impo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task04_Collector", "task04_Collector\task04_Collector.csproj", "{58B4F0E1-EA24-4AB0-9FAA-D86F435315A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task05_Create Attribute", "task05_Create Attribute\task05_Create Attribute.csproj", "{C0AEDEFC-F175-45E1-B556-18B8ED6ADD2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{58B4F0E1-EA24-4AB0-9FAA-D86F435315A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58B4F0E1-EA24-4AB0-9FAA-D86F435315A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58B4F0E1-EA24-4AB0-9FAA-D86F435315A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0AEDEFC-F175-45E1-B556-18B8ED6ADD2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0AEDEFC-F175-45E1-B556-18B8ED6ADD2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0AEDEFC-F175-45E1-B556-18B8ED6ADD2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0AEDEFC-F175-45E1-B556-18B8ED6ADD2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
