@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandwich", "Sandwich\Sandwich.csproj", "{8FDD9DA1-0571-4DD7-8F1F-92A03FFCD3AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandwich.Tests", "Sandwich.Tests\Sandwich.Tests.csproj", "{3BF89E3F-1C23-4040-A8E8-B72501FFA514}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8FDD9DA1-0571-4DD7-8F1F-92A03FFCD3AB} = {8FDD9DA1-0571-4DD7-8F1F-92A03FFCD3AB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FDD9DA1-0571-4DD7-8F1F-92A03FFCD3AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FDD9DA1-0571-4DD7-8F1F-92A03FFCD3AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FDD9DA1-0571-4DD7-8F1F-92A03FFCD3AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FDD9DA1-0571-4DD7-8F1F-92A03FFCD3AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BF89E3F-1C23-4040-A8E8-B72501FFA514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF89E3F-1C23-4040-A8E8-B72501FFA514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF89E3F-1C23-4040-A8E8-B72501FFA514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF89E3F-1C23-4040-A8E8-B72501FFA514}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24513AC9-566D-4608-807C-6977EB63799B}
+	EndGlobalSection
+EndGlobal
