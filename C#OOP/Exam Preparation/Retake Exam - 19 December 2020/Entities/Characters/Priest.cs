@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WarCroft.Constants;
 using WarCroft.Entities.Characters.Contracts;
 using WarCroft.Entities.Inventory;
 
@@ -18,6 +19,10 @@ namespace WarCroft.Entities.Characters
             if (this.IsAlive && character.IsAlive)
             {
                 character.Health += this.AbilityPoints;
+            }
+            else
+            {
+                throw new InvalidOperationException(ExceptionMessages.AffectedCharacterDead);
             }
         }
     }

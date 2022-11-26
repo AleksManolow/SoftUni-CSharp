@@ -24,6 +24,10 @@ namespace WarCroft.Entities.Characters
                 }
                 character.TakeDamage(this.AbilityPoints);
             }
+            else
+            {
+                throw new InvalidOperationException(ExceptionMessages.AffectedCharacterDead);
+            }
         }
     }
 }
