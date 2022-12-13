@@ -44,7 +44,22 @@
 8. [**Iterators and Comparators**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week08_Iterators%20and%20Comparators)
 9. [**Algorithms Introduction**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/week09_Algorithms%20Introduction)
   </details>
-    
+  
+***
+ <details>
+ <summary><h3>OOP Carriculum List</summary>
+ 
+1. [**Inheritance**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/01.Inheritance)
+2. [**Encapsulation**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/02.Encapsulation)
+3. [**Interfaces and Abstraction**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/03.Interfaces%20and%20Abstraction)
+4. [**Polymorphism**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/04.Polymorphism)
+5. [**Exception Handling**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/05.Exception%20Handling)
+6. [**Reflection and Attributes**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/06.Reflection%20and%20Attributes)
+7. [**Unit Testing**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/07.Unit%20Testing)
+8. [**Mocking And Test-Driven Development**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/08.%20Mocking%20And%20Test-Driven%20Development)
+9. [**Design Patterns**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/09.Design%20Patterns)
+  </details>
+  
 ***
  <details>
  <summary><h3>Exam Practice Problems</summary>
@@ -53,6 +68,7 @@ Here you can find exam problems I used for practice:
 1. [**Basics**]()
 2. [**Fundamentals**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Fundamentals/Exam%20Preparation) 
 3. [**Advanced**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/Exam%20Preparations)
+4. [**OOP**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/Exam%20Preparation)
   </details>
   
 ***
