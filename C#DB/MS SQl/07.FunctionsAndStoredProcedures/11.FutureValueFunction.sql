@@ -1,8 +1,8 @@
-CREATE OR ALTER FUNCTION ufn_CalculateFutureValue (@sum DECIMAL, @yearlyInterestRate FLOAT, @numberOfYears INT)
-RETURNS DECIMAL(10, 4)
-AS
+CREATE OR ALTER FUNCTION ufn_CalculateFutureValue (@Sum DECIMAL(18,4), @Yrate FLOAT, @years INT)
+RETURNS DECIMAL(18,4)
 BEGIN
-	RETURN ROUND(@sum * (POWER((1 + @yearlyInterestRate), @numberOfYears)), 4) 
+    DECLARE @Result DECIMAL(18,4) = @Sum * POWER((1+ @Yrate),@years)
+    RETURN @Result
 END
 
 GO 
