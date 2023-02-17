@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task02_Villain Names", "task02_Villain Names\task02_Villain Names.csproj", "{EE1BEC35-F550-4127-8E6A-5E1488BA2203}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE1BEC35-F550-4127-8E6A-5E1488BA2203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE1BEC35-F550-4127-8E6A-5E1488BA2203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE1BEC35-F550-4127-8E6A-5E1488BA2203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE1BEC35-F550-4127-8E6A-5E1488BA2203}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {394BF6B5-2A25-4054-B964-C675EA81C426}
+	EndGlobalSection
+EndGlobal
