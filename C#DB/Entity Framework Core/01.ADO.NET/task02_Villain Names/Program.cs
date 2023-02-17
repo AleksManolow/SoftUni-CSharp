@@ -8,10 +8,12 @@ namespace task02_Villain_Names
     {
         static void Main(string[] args)
         {
+            //Creating a connection to the database
             using SqlConnection sqlConnection =
                 new SqlConnection(@"Server=DESKTOP-AJ5FISA\SQLEXPRESS;Database=MinionsDB;Integrated Security = True;TrustServerCertificate=True;");
             sqlConnection.Open();
 
+            //Create command with request and link created above
             SqlCommand sqlCommand = new SqlCommand(
                   @"SELECT 
                         v.Name, 
@@ -25,6 +27,7 @@ namespace task02_Villain_Names
 
             StringBuilder sb = new StringBuilder();
 
+            //Reading from the command
             SqlDataReader reader = sqlCommand.ExecuteReader();
             while (reader.Read())
             {
