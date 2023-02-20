@@ -95,6 +95,7 @@ Here you can find exam problems I used for practice:
  2. [**Fundamentals**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Fundamentals/Exam)
  3. [**Advanced**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/Exam)
  4. [**OOP**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/Exam)
+ 5. [**MS SQL**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/MS%20SQl/Exam)
  </details>
  
  ***
