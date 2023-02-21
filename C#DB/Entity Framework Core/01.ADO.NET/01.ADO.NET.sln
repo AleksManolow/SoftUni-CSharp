@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task04_Add Minion", "task04
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task05_Change Town Names Casing", "task05_Change Town Names Casing\task05_Change Town Names Casing.csproj", "{715B4C99-F8CD-4B09-9534-D16F60177D13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task06_Remove Villain", "task06_Remove Villain\task06_Remove Villain.csproj", "{DAA85A5D-91B0-4F10-8577-FC2B67F4337E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task06_Remove Villain", "task06_Remove Villain\task06_Remove Villain.csproj", "{DAA85A5D-91B0-4F10-8577-FC2B67F4337E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task07_Print All Minion Names", "task07_Print All Minion Names\task07_Print All Minion Names.csproj", "{86171317-C95B-4559-886A-7FB95CADEE1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task07_Print All Minion Names", "task07_Print All Minion Names\task07_Print All Minion Names.csproj", "{86171317-C95B-4559-886A-7FB95CADEE1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task09_Increase Age Stored Procedure", "task09_Increase Age Stored Procedure\task09_Increase Age Stored Procedure.csproj", "{D62F2755-CF62-4567-9A30-BC9516559975}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{86171317-C95B-4559-886A-7FB95CADEE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86171317-C95B-4559-886A-7FB95CADEE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86171317-C95B-4559-886A-7FB95CADEE1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D62F2755-CF62-4567-9A30-BC9516559975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D62F2755-CF62-4567-9A30-BC9516559975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D62F2755-CF62-4567-9A30-BC9516559975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D62F2755-CF62-4567-9A30-BC9516559975}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
