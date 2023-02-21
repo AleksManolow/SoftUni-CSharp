@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "task05_Change Town Names Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task06_Remove Villain", "task06_Remove Villain\task06_Remove Villain.csproj", "{DAA85A5D-91B0-4F10-8577-FC2B67F4337E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task07_Print All Minion Names", "task07_Print All Minion Names\task07_Print All Minion Names.csproj", "{86171317-C95B-4559-886A-7FB95CADEE1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DAA85A5D-91B0-4F10-8577-FC2B67F4337E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAA85A5D-91B0-4F10-8577-FC2B67F4337E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAA85A5D-91B0-4F10-8577-FC2B67F4337E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86171317-C95B-4559-886A-7FB95CADEE1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86171317-C95B-4559-886A-7FB95CADEE1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86171317-C95B-4559-886A-7FB95CADEE1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86171317-C95B-4559-886A-7FB95CADEE1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
