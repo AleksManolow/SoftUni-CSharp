@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using _02._Database_First.Models;
+using SoftUni.Models;
 
-namespace _02._Database_First.Data
+namespace SoftUni.Data
 {
     public partial class MinionsDBContext : DbContext
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace _02._Database_First.Models
+namespace SoftUni.Models
 {
     public partial class Minion
     {
