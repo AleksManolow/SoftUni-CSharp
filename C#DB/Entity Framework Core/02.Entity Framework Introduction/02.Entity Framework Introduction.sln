@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.AddingANewAddressAndUpda
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.EmployeesAndProjects", "07.EmployeesAndProjects\07.EmployeesAndProjects.csproj", "{0A2E3024-B92B-4125-B08E-139B4D8B246C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.AddressesByTown", "08.AddressesByTown\08.AddressesByTown.csproj", "{C46768F9-726B-4512-9D86-053141827636}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{0A2E3024-B92B-4125-B08E-139B4D8B246C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A2E3024-B92B-4125-B08E-139B4D8B246C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A2E3024-B92B-4125-B08E-139B4D8B246C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C46768F9-726B-4512-9D86-053141827636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C46768F9-726B-4512-9D86-053141827636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C46768F9-726B-4512-9D86-053141827636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C46768F9-726B-4512-9D86-053141827636}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
