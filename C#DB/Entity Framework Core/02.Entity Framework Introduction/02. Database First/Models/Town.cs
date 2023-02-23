@@ -7,14 +7,12 @@ namespace SoftUni.Models
     {
         public Town()
         {
-            Minions = new HashSet<Minion>();
+            Addresses = new HashSet<Address>();
         }
 
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public int? CountryCode { get; set; }
+        public int TownId { get; set; }
+        public string Name { get; set; } = null!;
 
-        public virtual Country? CountryCodeNavigation { get; set; }
-        public virtual ICollection<Minion> Minions { get; set; }
+        public virtual ICollection<Address> Addresses { get; set; }
     }
 }
