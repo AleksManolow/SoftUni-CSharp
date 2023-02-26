@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.FindLatest10Projects", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.IncreaseSalaries", "12.IncreaseSalaries\12.IncreaseSalaries.csproj", "{7932ED1F-3E2E-4EF5-8793-7C3347088E72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.FindEmployeesByFirstNameStartingWithSa", "13.FindEmployeesByFirstNameStartingWithSa\13.FindEmployeesByFirstNameStartingWithSa.csproj", "{4F01A4E2-F4B3-4660-8D58-B9BC343D2FE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,6 +80,10 @@ Global
 		{7932ED1F-3E2E-4EF5-8793-7C3347088E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7932ED1F-3E2E-4EF5-8793-7C3347088E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7932ED1F-3E2E-4EF5-8793-7C3347088E72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F01A4E2-F4B3-4660-8D58-B9BC343D2FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F01A4E2-F4B3-4660-8D58-B9BC343D2FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F01A4E2-F4B3-4660-8D58-B9BC343D2FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F01A4E2-F4B3-4660-8D58-B9BC343D2FE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
