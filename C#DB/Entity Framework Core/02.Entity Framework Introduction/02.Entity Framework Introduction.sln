@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.FindEmployeesByFirstName
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.DeleteProjectById", "14.DeleteProjectById\14.DeleteProjectById.csproj", "{C78B3DCA-DC51-4149-8741-47335AA7157C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.RemoveTown", "15.RemoveTown\15.RemoveTown.csproj", "{8F51B57C-4AE5-43FB-8C3A-B7DA694636A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +92,10 @@ Global
 		{C78B3DCA-DC51-4149-8741-47335AA7157C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C78B3DCA-DC51-4149-8741-47335AA7157C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C78B3DCA-DC51-4149-8741-47335AA7157C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F51B57C-4AE5-43FB-8C3A-B7DA694636A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F51B57C-4AE5-43FB-8C3A-B7DA694636A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F51B57C-4AE5-43FB-8C3A-B7DA694636A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F51B57C-4AE5-43FB-8C3A-B7DA694636A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
