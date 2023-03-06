@@ -32,8 +32,12 @@
             string result = GetBooksByCategory(db, input);
             Console.WriteLine(result);*/
 
-            string input = Console.ReadLine();
+            /*string input = Console.ReadLine();
             string result = GetBooksReleasedBefore(db, input);
+            Console.WriteLine(result);*/
+
+            string input = Console.ReadLine();
+            string result = GetAuthorNamesEndingIn(db, input);
             Console.WriteLine(result);
 
         }
@@ -138,6 +142,19 @@
                 sb.AppendLine($"{book.Title} - {book.EditionType} - ${book.Price:F2}");
             }
             return sb.ToString().TrimEnd();
+        }
+        //Task08
+        public static string GetAuthorNamesEndingIn(BookShopContext context, string input)
+        {
+            var authors = context
+                .Authors
+                .Where(a => a.FirstName.EndsWith(input))
+                .Select(a => $"{a.FirstName} {a.LastName}")
+                .ToArray()
+                .OrderBy(a => a)
+                .ToArray();
+
+            return string.Join(Environment.NewLine, authors);
         }
     }
 }
