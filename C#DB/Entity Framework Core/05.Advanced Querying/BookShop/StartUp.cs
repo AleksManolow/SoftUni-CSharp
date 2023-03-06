@@ -11,7 +11,7 @@
         public static void Main()
         {
             using var db = new BookShopContext();
-            DbInitializer.ResetDatabase(db);
+            //DbInitializer.ResetDatabase(db);
 
             /*string ageRestriction = Console.ReadLine();
             string result = GetBooksByAgeRestriction(db, ageRestriction);
@@ -20,7 +20,11 @@
             /*string result = GetGoldenBooks(db);
             Console.WriteLine(result);*/
 
-            string result = GetBooksByPrice(db);
+            /*string result = GetBooksByPrice(db);
+            Console.WriteLine(result);*/
+
+            int year = int.Parse(Console.ReadLine());
+            string result = GetBooksNotReleasedIn(db, year);
             Console.WriteLine(result);
 
         }
@@ -78,6 +82,16 @@
                 sb.AppendLine($"{book.Title} - ${book.Price:F2}");
             }
             return sb.ToString().TrimEnd();
+        }
+        //Task05
+        public static string GetBooksNotReleasedIn(BookShopContext context, int year)
+        {
+            var bookTitle = context.Books
+                .Where(b => b.ReleaseDate.Value.Year != year)
+                .OrderBy(b => b.BookId)
+                .Select(b => b.Title)
+                .ToArray();
+            return string.Join(Environment.NewLine, bookTitle);
         }
     }
 }
