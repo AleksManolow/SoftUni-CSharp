@@ -4,6 +4,7 @@
     using Data;
     using Initializer;
     using System.Text;
+    using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
     public class StartUp
     {
@@ -12,9 +13,14 @@
             using var db = new BookShopContext();
             DbInitializer.ResetDatabase(db);
 
-            string ageRestriction = Console.ReadLine();
+            /*string ageRestriction = Console.ReadLine();
             string result = GetBooksByAgeRestriction(db, ageRestriction);
+            Console.WriteLine(result);*/
+
+            string result = GetGoldenBooks(db);
             Console.WriteLine(result);
+
+
 
         }
         //Task 02
@@ -37,6 +43,20 @@
                 .ToArray();
 
             return string.Join(Environment.NewLine, bookTitles);
+        }
+        //Task03
+        public static string GetGoldenBooks(BookShopContext context)
+        {
+            EditionType editionType;
+
+            var isParseSuccess = Enum.TryParse<EditionType>("Gold", true, out editionType);
+
+            var bookTitles = context.Books
+                .Where(b => b.EditionType == editionType && b.Copies < 5000)
+                .OrderBy(b => b.BookId)
+                .Select(b => b.Title)
+                .ToArray();
+            return string.Join(Environment.NewLine, bookTitles);    
         }
     }
 }
