@@ -3,6 +3,7 @@
     using BookShop.Models.Enums;
     using Data;
     using Initializer;
+    using System.Globalization;
     using System.Text;
     using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
@@ -27,8 +28,12 @@
             string result = GetBooksNotReleasedIn(db, year);
             Console.WriteLine(result);*/
 
-            string input = Console.ReadLine();
+            /*string input = Console.ReadLine();
             string result = GetBooksByCategory(db, input);
+            Console.WriteLine(result);*/
+
+            string input = Console.ReadLine();
+            string result = GetBooksReleasedBefore(db, input);
             Console.WriteLine(result);
 
         }
@@ -110,6 +115,29 @@
                 .ToArray();
 
             return string.Join(Environment.NewLine, bookTitle);
+        }
+        //Task07
+        public static string GetBooksReleasedBefore(BookShopContext context, string date)
+        {
+            var parsedDate = DateTime.ParseExact(date, "dd-MM-yyyy", CultureInfo.InvariantCulture);
+
+            var books = context.Books
+                .Where(b => b.ReleaseDate < parsedDate)
+                .OrderByDescending(b => b.ReleaseDate)
+                .Select(b => new
+                {
+                    b.Title,
+                    b.EditionType,
+                    b.Price
+                })
+                .ToArray();
+
+            StringBuilder sb = new StringBuilder();
+            foreach (var book in books)
+            {
+                sb.AppendLine($"{book.Title} - {book.EditionType} - ${book.Price:F2}");
+            }
+            return sb.ToString().TrimEnd();
         }
     }
 }
