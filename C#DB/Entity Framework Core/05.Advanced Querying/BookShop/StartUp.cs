@@ -12,25 +12,31 @@
             using var db = new BookShopContext();
             DbInitializer.ResetDatabase(db);
 
-            string input = Console.ReadLine();
-            string result = GetBooksByAgeRestriction(db, input);
+            string ageRestriction = Console.ReadLine();
+            string result = GetBooksByAgeRestriction(db, ageRestriction);
             Console.WriteLine(result);
 
         }
+        //Task 02
         public static string GetBooksByAgeRestriction(BookShopContext context, string command)
         {
-            var books = context.Books
-                .ToArray()
-                .Where(b => b.AgeRestriction.ToString().ToLower() == command.ToLower())
-                .OrderBy(b => b.Title)
-                .ToList();
+            AgeRestriction ageRestriction;
 
-            StringBuilder sb = new StringBuilder();
-            foreach (var book in books)
+            var isParseSuccess = Enum.TryParse<AgeRestriction>(command, true, out ageRestriction);
+
+            if (!isParseSuccess)
             {
-                sb.AppendLine(book.Title);
+                return string.Empty;
             }
-            return sb.ToString().TrimEnd();
+
+            string[] bookTitles = context
+                .Books
+                .Where(b => b.AgeRestriction == ageRestriction)
+                .Select(b => b.Title)
+                .OrderBy(t => t)
+                .ToArray();
+
+            return string.Join(Environment.NewLine, bookTitles);
         }
     }
 }
