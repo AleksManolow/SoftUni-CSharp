@@ -44,9 +44,12 @@
             string result = GetBookTitlesContaining(db, input);
             Console.WriteLine(result);*/
 
-            string input = Console.ReadLine();
+            /*string input = Console.ReadLine();
             string result = GetBooksByAuthor(db, input);
-            Console.WriteLine(result);
+            Console.WriteLine(result);*/
+
+            int lengthTitile = int.Parse(Console.ReadLine());
+            Console.WriteLine(CountBooks(db, lengthTitile));
 
         }
         //Task 02
@@ -183,6 +186,11 @@
                 .Select(b => $"{b.Title} ({b.Author.FirstName} {b.Author.LastName})")
                 .ToArray();
             return string.Join(Environment.NewLine, books);
+        }
+        //Task11
+        public static int CountBooks(BookShopContext context, int lengthCheck)
+        {
+            return context.Books.Where(b => b.Title.Length > lengthCheck).Count();
         }
     }
 }
