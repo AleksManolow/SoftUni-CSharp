@@ -51,7 +51,10 @@
             /*int lengthTitile = int.Parse(Console.ReadLine());
             Console.WriteLine(CountBooks(db, lengthTitile));*/
 
-            string result = CountCopiesByAuthor(db);
+            /*string result = CountCopiesByAuthor(db);
+            Console.WriteLine(result);*/
+
+            string result = GetTotalProfitByCategory(db);
             Console.WriteLine(result);
         }
         //Task 02
@@ -203,6 +206,31 @@
                 .ToArray();
             return string.Join(Environment.NewLine, authers);
         }
+        //Task13
+        public static string GetTotalProfitByCategory(BookShopContext context)
+        {
+            StringBuilder output = new StringBuilder();
+
+            var profitsByCategory = context
+                .Categories
+                .Select(c => new
+                {
+                    CategoryName = c.Name,
+                    Profit = c.CategoryBooks.Sum(cb => cb.Book.Copies * cb.Book.Price)
+
+                })
+                .OrderByDescending(c => c.Profit)
+                .ThenBy(c => c.CategoryName)
+                .ToArray();
+
+            foreach (var c in profitsByCategory)
+            {
+                output.AppendLine($"{c.CategoryName} ${c.Profit:f2}");
+            }
+
+            return output.ToString().TrimEnd();
+        }
+
     }
 }
 
