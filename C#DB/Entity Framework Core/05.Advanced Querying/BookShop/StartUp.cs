@@ -48,9 +48,11 @@
             string result = GetBooksByAuthor(db, input);
             Console.WriteLine(result);*/
 
-            int lengthTitile = int.Parse(Console.ReadLine());
-            Console.WriteLine(CountBooks(db, lengthTitile));
+            /*int lengthTitile = int.Parse(Console.ReadLine());
+            Console.WriteLine(CountBooks(db, lengthTitile));*/
 
+            string result = CountCopiesByAuthor(db);
+            Console.WriteLine(result);
         }
         //Task 02
         public static string GetBooksByAgeRestriction(BookShopContext context, string command)
@@ -191,6 +193,15 @@
         public static int CountBooks(BookShopContext context, int lengthCheck)
         {
             return context.Books.Where(b => b.Title.Length > lengthCheck).Count();
+        }
+        //Task12
+        public static string CountCopiesByAuthor(BookShopContext context)
+        {
+            var authers = context.Authors
+                .OrderByDescending(a => a.Books.Sum(b => b.Copies))
+                .Select(a => $"{a.FirstName} {a.LastName} - {a.Books.Sum(b => b.Copies)}")
+                .ToArray();
+            return string.Join(Environment.NewLine, authers);
         }
     }
 }
