@@ -57,7 +57,12 @@
             /*string result = GetTotalProfitByCategory(db);
             Console.WriteLine(result);*/
 
-            string result = GetMostRecentBooks(db); 
+            /*string result = GetMostRecentBooks(db); 
+            Console.WriteLine(result);*/
+
+            //IncreasePrices(db);
+
+            int result = RemoveBooks(db);
             Console.WriteLine(result);
         }
         //Task 02
@@ -265,6 +270,34 @@
                 }
             }
             return output.ToString().TrimEnd();
+        }
+        //Task15
+        public static void IncreasePrices(BookShopContext context)
+        {
+            var booksBefore2010 = context
+                .Books
+                .Where(b => b.ReleaseDate.Value.Year < 2010);
+
+            foreach (var book in booksBefore2010)
+            {
+                book.Price += 5;
+            }
+
+            context.SaveChanges();
+        }
+        //Task16
+        public static int RemoveBooks(BookShopContext context)
+        {
+            var booksToDelete = context
+                .Books
+                .Where(b => b.Copies < 4200);
+
+            int bookCount = booksToDelete.Count();
+
+            context.Books.RemoveRange(booksToDelete);
+            context.SaveChanges();
+
+            return bookCount;
         }
     }
 }
