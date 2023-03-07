@@ -62,8 +62,8 @@
 
             //IncreasePrices(db);
 
-            int result = RemoveBooks(db);
-            Console.WriteLine(result);
+            /*int result = RemoveBooks(db);
+            Console.WriteLine(result);*/
         }
         //Task 02
         public static string GetBooksByAgeRestriction(BookShopContext context, string command)
