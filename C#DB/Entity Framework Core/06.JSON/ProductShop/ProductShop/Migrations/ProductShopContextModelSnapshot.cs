@@ -36,7 +36,7 @@ namespace ProductShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("ProductShop.Models.CategoryProduct", b =>
@@ -51,7 +51,7 @@ namespace ProductShop.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("CategoriesProducts");
+                    b.ToTable("CategoriesProducts", (string)null);
                 });
 
             modelBuilder.Entity("ProductShop.Models.Product", b =>
@@ -82,7 +82,7 @@ namespace ProductShop.Migrations
 
                     b.HasIndex("SellerId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("ProductShop.Models.User", b =>
@@ -105,7 +105,7 @@ namespace ProductShop.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("ProductShop.Models.CategoryProduct", b =>
