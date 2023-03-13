@@ -77,6 +77,17 @@
   
 ***
  <details>
+ <summary><h3>Entity Framework Core Carriculum List</summary>
+ 
+1. [**ADO.NET**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/01.ADO.NET)
+2. [**Entity Framework Introduction**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/02.Entity%20Framework%20Introduction)
+3. [**Entity Relations**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/03.Entity%20Relations)
+4. [**LINQ**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/04.LINQ)
+5. [**Advanced Querying**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/05.Advanced%20Querying)
+  </details>
+  
+***
+ <details>
  <summary><h3>Exam Practice Problems</summary>
   
 Here you can find exam problems I used for practice:
