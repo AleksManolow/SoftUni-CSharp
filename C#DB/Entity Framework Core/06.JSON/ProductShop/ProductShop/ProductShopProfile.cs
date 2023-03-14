@@ -9,6 +9,7 @@ namespace ProductShop
         public ProductShopProfile() 
         {
             this.CreateMap<UserDto, User>();
+            this.CreateMap<ProductDto, Product>();
         }
     }
 }

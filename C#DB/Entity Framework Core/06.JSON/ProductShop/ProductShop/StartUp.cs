@@ -15,8 +15,11 @@ namespace ProductShop
             /*dbContext.Database.EnsureDeleted();
             dbContext.Database.EnsureCreated();*/
 
-            string inputJson = File.ReadAllText(@"../../../Datasets/users.json");
-            string result = ImportUsers(dbContext, inputJson);
+            /*string inputJson = File.ReadAllText(@"../../../Datasets/users.json");
+            string result = ImportUsers(dbContext, inputJson);*/
+
+            string inputJson = File.ReadAllText(@"../../../Datasets/products.json");
+            string result = ImportProducts(dbContext, inputJson);
 
             Console.WriteLine(result);
         }
@@ -41,6 +44,22 @@ namespace ProductShop
             dbContext.SaveChanges();
 
             return $"Successfully imported {users.Count}";
+        }
+        public static string ImportProducts(ProductShopContext context, string inputJson)
+        {
+            IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<ProductShopProfile>();
+            }));
+
+            var productsDto = JsonConvert.DeserializeObject<ProductDto[]>(inputJson);
+
+            Product[] products = mapper.Map<Product[]>(productsDto);
+
+            context.Products.AddRange(products);
+            context.SaveChanges();
+
+            return $"Successfully imported {products.Count()}";
         }
     }
 }
