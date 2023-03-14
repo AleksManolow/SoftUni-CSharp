@@ -18,8 +18,11 @@ namespace ProductShop
             /*string inputJson = File.ReadAllText(@"../../../Datasets/users.json");
             string result = ImportUsers(dbContext, inputJson);*/
 
-            string inputJson = File.ReadAllText(@"../../../Datasets/products.json");
-            string result = ImportProducts(dbContext, inputJson);
+            /*string inputJson = File.ReadAllText(@"../../../Datasets/products.json");
+            string result = ImportProducts(dbContext, inputJson);*/
+
+            string inputJson = File.ReadAllText(@"../../../Datasets/categories.json");
+            string result = ImportCategories(dbContext, inputJson);
 
             Console.WriteLine(result);
         }
@@ -60,6 +63,32 @@ namespace ProductShop
             context.SaveChanges();
 
             return $"Successfully imported {products.Count()}";
+        }
+        public static string ImportCategories(ProductShopContext context, string inputJson)
+        {
+            IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<ProductShopProfile>();
+            }));
+
+            var categoriesDto = JsonConvert.DeserializeObject<CategoryDto[]>(inputJson);
+
+            ICollection<Category> categories = new HashSet<Category>();
+            foreach (var categoryDto in categoriesDto)
+            {
+                if (String.IsNullOrEmpty(categoryDto.Name))
+                {
+                    continue;
+                }
+
+                Category category = mapper.Map<Category>(categoryDto);
+
+                categories.Add(category);
+            }
+            context.Categories.AddRange(categories);
+            context.SaveChanges();
+
+            return $"Successfully imported {categories.Count()}";
         }
     }
 }
