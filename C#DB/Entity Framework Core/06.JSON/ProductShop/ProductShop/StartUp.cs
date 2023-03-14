@@ -20,8 +20,7 @@ namespace ProductShop
 
             Console.WriteLine(result);
         }
-
-        private static string ImportUsers(ProductShopContext dbContext, string inputJson)
+        public static string ImportUsers(ProductShopContext dbContext, string inputJson)
         {
             IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
             {
@@ -39,7 +38,7 @@ namespace ProductShop
                 users.Add(user);
             }
             dbContext.Users.AddRange(users);
-            //dbContext.SaveChanges();
+            dbContext.SaveChanges();
 
             return $"Successfully imported {users.Count}";
         }
