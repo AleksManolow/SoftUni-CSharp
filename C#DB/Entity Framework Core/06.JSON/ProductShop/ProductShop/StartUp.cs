@@ -28,8 +28,10 @@ namespace ProductShop
             /*string inputJson = File.ReadAllText(@"../../../Datasets/categories-products.json");
             string result = ImportCategoryProducts(dbContext, inputJson);*/
 
-            
-            string result = GetProductsInRange(dbContext);
+            //string result = GetProductsInRange(dbContext);
+
+            string result = GetSoldProducts(dbContext);
+
             Console.WriteLine(result);
         }
         public static string ImportUsers(ProductShopContext dbContext, string inputJson)
@@ -130,6 +132,31 @@ namespace ProductShop
                 .AsNoTracking()
                 .ToArray();
             return JsonConvert.SerializeObject(products, Formatting.Indented);
+        }
+        public static string GetSoldProducts(ProductShopContext context)
+        {
+            var users = context.Users
+                .Where(u => u.ProductsSold.Any(p => p.Buyer != null))
+                .OrderBy(u => u.LastName)
+                .ThenBy(u => u.FirstName)
+                .Select(u => new 
+                {
+                    firstName = u.FirstName,
+                    lastName = u.LastName,
+                    soldProducts = u.ProductsSold
+                    .Where(p => p.Buyer != null)
+                    .Select(p => new
+                    {
+                        name = p.Name,
+                        price = p.Price,
+                        buyerFirstName = p.Buyer.FirstName,
+                        buyerLastName = p.Buyer.LastName
+                    }).ToArray()
+                })
+                .AsNoTracking()
+                .ToArray();
+
+            return JsonConvert.SerializeObject(users, Formatting.Indented);
         }
     }
 }
