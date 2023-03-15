@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using ProductShop.Data;
 using ProductShop.DTOs.Import;
 using ProductShop.Models;
@@ -24,9 +25,11 @@ namespace ProductShop
             /*string inputJson = File.ReadAllText(@"../../../Datasets/categories.json");
             string result = ImportCategories(dbContext, inputJson);*/
 
-            string inputJson = File.ReadAllText(@"../../../Datasets/categories-products.json");
-            string result = ImportCategoryProducts(dbContext, inputJson);
+            /*string inputJson = File.ReadAllText(@"../../../Datasets/categories-products.json");
+            string result = ImportCategoryProducts(dbContext, inputJson);*/
 
+            
+            string result = GetProductsInRange(dbContext);
             Console.WriteLine(result);
         }
         public static string ImportUsers(ProductShopContext dbContext, string inputJson)
@@ -112,6 +115,21 @@ namespace ProductShop
             context.SaveChanges();
 
             return $"Successfully imported {categoriesProducts.Count()}";
+        }
+        public static string GetProductsInRange(ProductShopContext context)
+        {
+            var products = context.Products
+                .Where(p => p.Price >= 500 && p.Price <= 1000)
+                .OrderBy(p => p.Price)
+                .Select(p => new
+                {
+                    name = p.Name,
+                    price = p.Price,
+                    seller = p.Seller.FirstName + " " + p.Seller.LastName
+                })
+                .AsNoTracking()
+                .ToArray();
+            return JsonConvert.SerializeObject(products, Formatting.Indented);
         }
     }
 }
