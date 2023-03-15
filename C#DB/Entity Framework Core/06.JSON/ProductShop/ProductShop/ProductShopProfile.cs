@@ -11,6 +11,7 @@ namespace ProductShop
             this.CreateMap<UserDto, User>();
             this.CreateMap<ProductDto, Product>();
             this.CreateMap<CategoryDto, Category>();
+            this.CreateMap<CategoryProductDto, CategoryProduct>();
         }
     }
 }
