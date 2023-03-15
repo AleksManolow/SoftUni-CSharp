@@ -32,10 +32,13 @@ namespace ProductShop
 
             //string result = GetSoldProducts(dbContext);
 
-            string result = GetCategoriesByProductsCount(dbContext);
+            //string result = GetCategoriesByProductsCount(dbContext);
+
+            string result = GetUsersWithProducts(dbContext);
 
             Console.WriteLine(result);
         }
+        //task01
         public static string ImportUsers(ProductShopContext dbContext, string inputJson)
         {
             IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
@@ -58,6 +61,7 @@ namespace ProductShop
 
             return $"Successfully imported {users.Count}";
         }
+        //task02
         public static string ImportProducts(ProductShopContext context, string inputJson)
         {
             IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
@@ -74,6 +78,7 @@ namespace ProductShop
 
             return $"Successfully imported {products.Count()}";
         }
+        //task03
         public static string ImportCategories(ProductShopContext context, string inputJson)
         {
             IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
@@ -100,6 +105,7 @@ namespace ProductShop
 
             return $"Successfully imported {categories.Count()}";
         }
+        //task04
         public static string ImportCategoryProducts(ProductShopContext context, string inputJson)
         {
             IMapper mapper = new Mapper(new MapperConfiguration(cmf =>
@@ -120,6 +126,7 @@ namespace ProductShop
 
             return $"Successfully imported {categoriesProducts.Count()}";
         }
+        //task05
         public static string GetProductsInRange(ProductShopContext context)
         {
             var products = context.Products
@@ -135,6 +142,7 @@ namespace ProductShop
                 .ToArray();
             return JsonConvert.SerializeObject(products, Formatting.Indented);
         }
+        //task06
         public static string GetSoldProducts(ProductShopContext context)
         {
             var users = context.Users
@@ -160,6 +168,7 @@ namespace ProductShop
 
             return JsonConvert.SerializeObject(users, Formatting.Indented);
         }
+        //task07
         public static string GetCategoriesByProductsCount(ProductShopContext context)
         {
             var categories = context.Categories
@@ -175,6 +184,43 @@ namespace ProductShop
                 .ToArray();
 
             return JsonConvert.SerializeObject(categories, Formatting.Indented);
+        }
+        //task08
+        public static string GetUsersWithProducts(ProductShopContext context)
+        {
+            var users = context.Users
+                .Where(u => u.ProductsSold.Any(p => p.Buyer != null))
+                .OrderByDescending(u => u.ProductsSold
+                .Where(p => p.Buyer != null)
+                .Count())
+                .Select(u => new
+                {
+                    lastName = u.LastName,
+                    age = u.Age,
+                    soldProducts = new
+                    {
+                        count = u.ProductsSold
+                        .Where(p => p.Buyer != null)
+                        .Count(),
+                        products = u.ProductsSold
+                        .Where(p => p.Buyer != null)
+                        .Select(p => new
+                        {
+                            name = p.Name,
+                            price = p.Price
+                        })
+
+                    }
+                })
+                .AsNoTracking()
+                .ToArray();
+
+            var usersInfo = new
+            {
+                usersCount = users.Count(),
+                users = users
+            };
+            return JsonConvert.SerializeObject(usersInfo, Formatting.Indented);
         }
     }
 }
