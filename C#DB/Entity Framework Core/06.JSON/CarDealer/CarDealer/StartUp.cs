@@ -16,8 +16,11 @@ namespace CarDealer
             /*string inputJson = File.ReadAllText(@"../../../Datasets/suppliers.json");
             string result = ImportSuppliers(dbContext, inputJson);*/
 
-            string inputJson = File.ReadAllText(@"../../../Datasets/parts.json");
-            string result = ImportParts(dbContext, inputJson);
+            /*string inputJson = File.ReadAllText(@"../../../Datasets/parts.json");
+            string result = ImportParts(dbContext, inputJson);*/
+
+            string inputJson = File.ReadAllText(@"../../../Datasets/cars.json");
+            string result = ImportCars(dbContext, inputJson);
 
             Console.WriteLine(result);
         }
@@ -36,6 +39,7 @@ namespace CarDealer
             context.SaveChanges();
             return $"Successfully imported {suppliers.Count}.";
         }
+        //Task10
         public static string ImportParts(CarDealerContext context, string inputJson)
         {
             IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
@@ -58,6 +62,41 @@ namespace CarDealer
             context.AddRange(parts);
             context.SaveChanges();
             return $"Successfully imported {parts.Count}.";
+        }
+        //Task11
+        public static string ImportCars(CarDealerContext context, string inputJson)
+        {
+            List<CarDto> cars = JsonConvert.DeserializeObject<List<CarDto>>(inputJson);
+
+            foreach (var car in cars)
+            {
+                Car currentCar = new Car()
+                {
+                    Make = car.Make,
+                    Model = car.Model,
+                    TravelledDistance = car.TravelledDistance
+                };
+
+                foreach (var part in car.PartsId)
+                {
+                    bool isValid = currentCar.PartsCars.FirstOrDefault(x => x.PartId == part) == null;
+                    bool isPartValid = context.Parts.FirstOrDefault(p => p.Id == part) != null;
+
+                    if (isValid && isPartValid)
+                    {
+                        currentCar.PartsCars.Add(new PartCar()
+                        {
+                            PartId = part
+                        });
+                    }
+                }
+
+                context.Cars.Add(currentCar);
+            }
+
+            context.SaveChanges();
+
+            return $"Successfully imported {context.Cars.Count()}.";
         }
     }
 }
