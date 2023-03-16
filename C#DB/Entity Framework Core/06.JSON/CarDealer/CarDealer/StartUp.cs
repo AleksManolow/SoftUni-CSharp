@@ -13,11 +13,15 @@ namespace CarDealer
         {
             CarDealerContext dbContext = new CarDealerContext();
 
-            string inputJson = File.ReadAllText(@"../../../Datasets/suppliers.json");
-            string result = ImportSuppliers(dbContext, inputJson);
+            /*string inputJson = File.ReadAllText(@"../../../Datasets/suppliers.json");
+            string result = ImportSuppliers(dbContext, inputJson);*/
+
+            string inputJson = File.ReadAllText(@"../../../Datasets/parts.json");
+            string result = ImportParts(dbContext, inputJson);
 
             Console.WriteLine(result);
         }
+        //Task09
         public static string ImportSuppliers(CarDealerContext context, string inputJson)
         {
             IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
@@ -31,6 +35,29 @@ namespace CarDealer
             context.AddRange(suppliers);
             context.SaveChanges();
             return $"Successfully imported {suppliers.Count}.";
+        }
+        public static string ImportParts(CarDealerContext context, string inputJson)
+        {
+            IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            }));
+
+            var partsDtos = JsonConvert.DeserializeObject<PartDto[]>(inputJson);
+            
+            ICollection<Part> parts = new HashSet<Part>();
+            foreach (var partDto in partsDtos)
+            {
+                if (!context.Suppliers.Any(s => s.Id == partDto.SupplierId))
+                {
+                    continue;
+                }
+                Part part = mapper.Map<Part>(partDto);
+                parts.Add(part);
+            }
+            context.AddRange(parts);
+            context.SaveChanges();
+            return $"Successfully imported {parts.Count}.";
         }
     }
 }
