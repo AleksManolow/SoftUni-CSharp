@@ -5,6 +5,7 @@ using CarDealer.Models;
 using Castle.Core.Resource;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Globalization;
 
 namespace CarDealer
 {
@@ -26,8 +27,10 @@ namespace CarDealer
             /*string inputJson = File.ReadAllText(@"../../../Datasets/customers.json");
             string result = ImportCustomers(dbContext, inputJson);*/
 
-            string inputJson = File.ReadAllText(@"../../../Datasets/sales.json");
-            string result = ImportSales(dbContext, inputJson);
+            /*string inputJson = File.ReadAllText(@"../../../Datasets/sales.json");
+            string result = ImportSales(dbContext, inputJson);*/
+
+            string result = GetOrderedCustomers(dbContext);
 
             Console.WriteLine(result);
         }
@@ -137,6 +140,22 @@ namespace CarDealer
             context.SaveChanges();
 
             return $"Successfully imported {sales.Count}.";
+        }
+        //Task14
+        public static string GetOrderedCustomers(CarDealerContext context)
+        {
+            var customers = context.Customers
+                .OrderBy(c => c.BirthDate)
+                .ThenBy(c => c.IsYoungDriver)
+                .Select(c => new 
+                { 
+                    Name = c.Name,
+                    BirthDate = c.BirthDate.ToString(@"dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    IsYoungDriver = c.IsYoungDriver
+                })
+                .AsNoTracking()
+                .ToArray();
+            return JsonConvert.SerializeObject(customers, Formatting.Indented);
         }
     }
 }
