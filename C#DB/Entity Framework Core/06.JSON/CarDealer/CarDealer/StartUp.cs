@@ -30,7 +30,9 @@ namespace CarDealer
             /*string inputJson = File.ReadAllText(@"../../../Datasets/sales.json");
             string result = ImportSales(dbContext, inputJson);*/
 
-            string result = GetOrderedCustomers(dbContext);
+            //string result = GetOrderedCustomers(dbContext);
+
+            string result = GetCarsFromMakeToyota(dbContext);
 
             Console.WriteLine(result);
         }
@@ -156,6 +158,25 @@ namespace CarDealer
                 .AsNoTracking()
                 .ToArray();
             return JsonConvert.SerializeObject(customers, Formatting.Indented);
+        }
+        //Task15
+        public static string GetCarsFromMakeToyota(CarDealerContext context)
+        {
+            var cars = context.Cars
+                .Where(c => c.Make == "Toyota")
+                .OrderBy(c => c.Model)
+                .ThenByDescending(c => c.TravelledDistance)
+                .Select(c => new
+                {
+                    Id = c.Id,
+                    Make = c.Make,
+                    Model = c.Model,
+                    TraveledDistance = c.TravelledDistance
+                })
+                .AsNoTracking()
+                .ToArray();
+            
+            return JsonConvert.SerializeObject(cars, Formatting.Indented);
         }
     }
 }
