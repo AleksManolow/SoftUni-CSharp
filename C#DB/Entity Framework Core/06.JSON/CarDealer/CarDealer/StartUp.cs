@@ -2,6 +2,7 @@
 using CarDealer.Data;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
+using Castle.Core.Resource;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
@@ -19,9 +20,12 @@ namespace CarDealer
             /*string inputJson = File.ReadAllText(@"../../../Datasets/parts.json");
             string result = ImportParts(dbContext, inputJson);*/
 
-            string inputJson = File.ReadAllText(@"../../../Datasets/cars.json");
-            string result = ImportCars(dbContext, inputJson);
+            /*string inputJson = File.ReadAllText(@"../../../Datasets/cars.json");
+            string result = ImportCars(dbContext, inputJson);*/
 
+            string inputJson = File.ReadAllText(@"../../../Datasets/customers.json");
+            string result = ImportCustomers(dbContext, inputJson);
+            
             Console.WriteLine(result);
         }
         //Task09
@@ -97,6 +101,23 @@ namespace CarDealer
             context.SaveChanges();
 
             return $"Successfully imported {context.Cars.Count()}.";
+        }
+        //Task12
+        public static string ImportCustomers(CarDealerContext context, string inputJson)
+        {
+            IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            }));
+
+            var customresDtos = JsonConvert.DeserializeObject<CustomerDto[]>(inputJson);
+
+            ICollection<Customer> customers = mapper.Map<Customer[]>(customresDtos);
+
+            context.Customers.AddRange(customers);
+            context.SaveChanges();
+
+            return $"Successfully imported {customers.Count}.";
         }
     }
 }
