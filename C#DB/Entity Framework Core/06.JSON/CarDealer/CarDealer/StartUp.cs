@@ -6,6 +6,7 @@ using Castle.Core.Resource;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Globalization;
+using System.IO;
 
 namespace CarDealer
 {
@@ -34,7 +35,11 @@ namespace CarDealer
 
             //string result = GetCarsFromMakeToyota(dbContext);
 
-            string result = GetLocalSuppliers(dbContext);
+            //string result = GetLocalSuppliers(dbContext);
+
+            //string result = GetCarsWithTheirListOfParts(dbContext);
+
+            string result = GetTotalSalesByCustomer(dbContext);
 
             Console.WriteLine(result);
         }
@@ -194,6 +199,58 @@ namespace CarDealer
                 .AsNoTracking()
                 .ToArray();
             return JsonConvert.SerializeObject(suppliers, Formatting.Indented);
+        }
+        //Task17
+        public static string GetCarsWithTheirListOfParts(CarDealerContext dbContext)
+        {
+            var carsAndParts = dbContext.Cars
+                .Select(c => new
+                {
+                    car = new
+                    {
+
+                        Make = c.Make,
+                        Model = c.Model,
+                        TraveledDistance = c.TravelledDistance,
+                    },
+                    parts = c.PartsCars
+                        .Select(p => new
+                        {
+                            Name = p.Part.Name,
+                            Price = $"{p.Part.Price:f2}"
+                        })
+                        .ToArray()
+                })
+                .AsNoTracking()
+                .ToArray();
+
+            return JsonConvert.SerializeObject(carsAndParts, Formatting.Indented);
+        }
+        //Task18
+        public static string GetTotalSalesByCustomer(CarDealerContext context)
+        {
+            var customers = context.Customers
+                .Where(c => c.Sales.Count >= 1)
+                .Select(c => new
+                {
+                    fullName = c.Name,
+                    boughtCars = c.Sales.Count,
+                    spentMoney = c.Sales.SelectMany(x => x.Car.PartsCars.Select(c => c.Part.Price))
+                })
+                .AsNoTracking()
+                .ToArray();
+
+            var totalSalesByCustomer = customers.Select(t => new
+            {
+                t.fullName,
+                t.boughtCars,
+                spentMoney = t.spentMoney.Sum()
+            })
+            .OrderByDescending(t => t.spentMoney)
+            .ThenByDescending(t => t.boughtCars)
+            .ToArray();
+
+            return JsonConvert.SerializeObject(totalSalesByCustomer, Formatting.Indented);
         }
     }
 }
