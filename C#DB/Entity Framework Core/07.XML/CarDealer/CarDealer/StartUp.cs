@@ -3,6 +3,7 @@ using CarDealer.Data;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
 using CarDealer.Utilities;
+using System.IO;
 using System.Xml.Serialization;
 
 namespace CarDealer
@@ -15,10 +16,13 @@ namespace CarDealer
             /*dbContext.Database.EnsureDeleted();
             dbContext.Database.EnsureCreated();*/
 
-            string result = ImportSuppliers(dbContext, @"../../../Datasets/suppliers.xml");
+            //string result = ImportSuppliers(dbContext, @"../../../Datasets/suppliers.xml");
+
+            string result = ImportParts(dbContext, @"../../../Datasets/parts.xml");
 
             Console.WriteLine(result);
         }
+        //Task09
         public static string ImportSuppliers(CarDealerContext context, string inputXml)
         {
             IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
@@ -59,6 +63,37 @@ namespace CarDealer
             context.SaveChanges();
 
             return $"Successfully imported {suppliers.Count}";
+        }
+        public static string ImportParts(CarDealerContext context, string inputXml)
+        {
+            IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            }));
+
+            XmlRootAttribute xmlRoot = new XmlRootAttribute("Parts");
+            XmlSerializer xmlSerializer =
+                new XmlSerializer(typeof(PartDto[]), xmlRoot);
+
+            StreamReader reader = new StreamReader(inputXml);
+            PartDto[] partDtos = (PartDto[])xmlSerializer.Deserialize(reader);
+
+            ICollection<Part> parts = new HashSet<Part>();
+            foreach (var partDto in partDtos)
+            {
+                if (!context.Suppliers.Any(s => s.Id == partDto.SupplierId))
+                {
+                    continue;
+                }
+
+                Part part = mapper.Map<Part>(partDto);
+                parts.Add(part);
+            }
+
+            context.Parts.AddRange(parts);
+            context.SaveChanges();
+
+            return $"Successfully imported {parts.Count}";
         }
     }
 }

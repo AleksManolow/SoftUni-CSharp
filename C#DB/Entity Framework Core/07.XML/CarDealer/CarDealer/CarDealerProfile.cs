@@ -9,6 +9,7 @@ namespace CarDealer
         public CarDealerProfile()
         {
             this.CreateMap<SupplierDto, Supplier>();
+            this.CreateMap<PartDto, Part>();
         }
     }
 }
