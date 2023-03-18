@@ -16,9 +16,13 @@ namespace CarDealer
             /*dbContext.Database.EnsureDeleted();
             dbContext.Database.EnsureCreated();*/
 
-            //string result = ImportSuppliers(dbContext, @"../../../Datasets/suppliers.xml");
+            /*string inputXml = File.ReadAllText(@"../../../Datasets/suppliers.xml");
+            string result = ImportSuppliers(dbContext, inputXml);*/
 
-            string result = ImportParts(dbContext, @"../../../Datasets/parts.xml");
+            string inputXml = File.ReadAllText(@"../../../Datasets/parts.xml");
+            string result = ImportParts(dbContext, inputXml);
+
+            //string result = ImportCars(dbContext, @"../../../Datasets/cars.xml");
 
             Console.WriteLine(result);
         }
@@ -34,7 +38,7 @@ namespace CarDealer
             XmlSerializer xmlSerializer =
                 new XmlSerializer(typeof(SupplierDto[]), xmlRoot);
 
-            StreamReader reader = new StreamReader(inputXml);
+            StringReader reader = new StringReader(inputXml);
             SupplierDto[] supplierDtos = (SupplierDto[])xmlSerializer.Deserialize(reader);
 
             //This is for convenience!!!
@@ -64,6 +68,7 @@ namespace CarDealer
 
             return $"Successfully imported {suppliers.Count}";
         }
+        //Task10
         public static string ImportParts(CarDealerContext context, string inputXml)
         {
             IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
@@ -75,7 +80,7 @@ namespace CarDealer
             XmlSerializer xmlSerializer =
                 new XmlSerializer(typeof(PartDto[]), xmlRoot);
 
-            StreamReader reader = new StreamReader(inputXml);
+            StringReader reader = new StringReader(inputXml);
             PartDto[] partDtos = (PartDto[])xmlSerializer.Deserialize(reader);
 
             ICollection<Part> parts = new HashSet<Part>();
@@ -95,5 +100,21 @@ namespace CarDealer
 
             return $"Successfully imported {parts.Count}";
         }
+        /*public static string ImportCars(CarDealerContext context, string inputXml)
+        {
+            XmlRootAttribute xmlRoot = new XmlRootAttribute("Cars");
+            XmlSerializer xmlSerializer =
+                new XmlSerializer(typeof(CarDto[]), xmlRoot);
+
+            StreamReader reader = new StreamReader(inputXml);
+            CarDto[] partDtos = (CarDto[])xmlSerializer.Deserialize(reader);
+
+            ICollection<Car> parts = new HashSet<Car>();
+            foreach (var partDto in partDtos)
+            {
+
+            }
+            return "";
+        }*/
     }
 }
