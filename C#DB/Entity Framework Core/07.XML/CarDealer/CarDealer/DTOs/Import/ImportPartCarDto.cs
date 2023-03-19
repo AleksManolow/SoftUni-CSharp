@@ -2,8 +2,8 @@
 
 namespace CarDealer.DTOs.Import
 {
-    [XmlType("PartId")]
-    public class CarPartDto
+    [XmlType("partId")]
+    public class ImportPartCarDto
     {
         [XmlAttribute("id")]
         public int PartId { get; set; }

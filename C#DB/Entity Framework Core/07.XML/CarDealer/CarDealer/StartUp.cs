@@ -19,10 +19,11 @@ namespace CarDealer
             /*string inputXml = File.ReadAllText(@"../../../Datasets/suppliers.xml");
             string result = ImportSuppliers(dbContext, inputXml);*/
 
-            string inputXml = File.ReadAllText(@"../../../Datasets/parts.xml");
-            string result = ImportParts(dbContext, inputXml);
+            /*string inputXml = File.ReadAllText(@"../../../Datasets/parts.xml");
+            string result = ImportParts(dbContext, inputXml);*/
 
-            //string result = ImportCars(dbContext, @"../../../Datasets/cars.xml");
+            string inputXml = File.ReadAllText(@"../../../Datasets/cars.xml");
+            string result = ImportCars(dbContext, inputXml);
 
             Console.WriteLine(result);
         }
@@ -100,21 +101,35 @@ namespace CarDealer
 
             return $"Successfully imported {parts.Count}";
         }
-        /*public static string ImportCars(CarDealerContext context, string inputXml)
+        public static string ImportCars(CarDealerContext context, string inputXml)
         {
-            XmlRootAttribute xmlRoot = new XmlRootAttribute("Cars");
-            XmlSerializer xmlSerializer =
-                new XmlSerializer(typeof(CarDto[]), xmlRoot);
+            var serializer = new XmlSerializer(typeof(ImportCarDto[]), new XmlRootAttribute("Cars"));
 
-            StreamReader reader = new StreamReader(inputXml);
-            CarDto[] partDtos = (CarDto[])xmlSerializer.Deserialize(reader);
+            using var reader = new StringReader(inputXml);
+            var carDtos = (ImportCarDto[])serializer.Deserialize(reader);
 
-            ICollection<Car> parts = new HashSet<Car>();
-            foreach (var partDto in partDtos)
-            {
+            var cars = carDtos
+                .Select(c => new Car
+                {
+                    Make = c.Make,
+                    Model = c.Model,
+                    TraveledDistance = c.TraveledDistance,
+                    PartsCars = c.PartsCars
+                    .Select(p => p.PartId)
+                    .Distinct()
+                    .Select(i => new PartCar
+                    {
+                        PartId = i
+                    })
+                   .ToList()
+                })
+                .ToList();
 
-            }
-            return "";
-        }*/
+
+            context.Cars.AddRange(cars);
+            context.SaveChanges();
+
+            return $"Successfully imported {cars.Count}";
+        }
     }
 }
