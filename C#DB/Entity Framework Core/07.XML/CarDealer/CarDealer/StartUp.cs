@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CarDealer.Data;
+using CarDealer.DTOs.Export;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
 using CarDealer.Utilities;
@@ -29,8 +30,10 @@ namespace CarDealer
             /*string inputXml = File.ReadAllText(@"../../../Datasets/customers.xml");
             string result = ImportCustomers(dbContext, inputXml);*/
 
-            string inputXml = File.ReadAllText(@"../../../Datasets/sales.xml");
-            string result = ImportSales(dbContext, inputXml);
+            /*string inputXml = File.ReadAllText(@"../../../Datasets/sales.xml");
+            string result = ImportSales(dbContext, inputXml);*/
+
+            string result = GetCarsWithDistance(dbContext);
 
             Console.WriteLine(result);
         }
@@ -191,6 +194,35 @@ namespace CarDealer
             context.SaveChanges();
 
             return $"Successfully imported {sales.Count}";
+        }
+        //Task14
+        public static string GetCarsWithDistance(CarDealerContext context)
+        {
+            var cars = context.Cars
+                .Where(c => c.TraveledDistance > 2000000)
+                .OrderBy(c => c.Make)
+                .ThenBy(c => c.Model)
+                .Take(10)
+                .ToArray();
+
+            var carDtos = cars
+                .Select(c => new CarWithDistanceDto
+                {
+                    Make = c.Make,
+                    Model = c.Model,
+                    TraveledDistance = c.TraveledDistance
+                })
+                .ToArray();
+
+
+            var namespaces = new XmlSerializerNamespaces();
+            namespaces.Add(string.Empty, null);
+
+            var serializer = new XmlSerializer(typeof(CarWithDistanceDto[]), new XmlRootAttribute("cars"));
+            using var writer = new StringWriter();
+            serializer.Serialize(writer, carDtos, namespaces);
+
+            return writer.ToString();
         }
     }
 }
