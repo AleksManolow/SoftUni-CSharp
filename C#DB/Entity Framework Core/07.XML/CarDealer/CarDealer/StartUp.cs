@@ -26,8 +26,11 @@ namespace CarDealer
             /*string inputXml = File.ReadAllText(@"../../../Datasets/cars.xml");
             string result = ImportCars(dbContext, inputXml);*/
 
-            string inputXml = File.ReadAllText(@"../../../Datasets/customers.xml");
-            string result = ImportCustomers(dbContext, inputXml);
+            /*string inputXml = File.ReadAllText(@"../../../Datasets/customers.xml");
+            string result = ImportCustomers(dbContext, inputXml);*/
+
+            string inputXml = File.ReadAllText(@"../../../Datasets/sales.xml");
+            string result = ImportSales(dbContext, inputXml);
 
             Console.WriteLine(result);
         }
@@ -159,6 +162,35 @@ namespace CarDealer
             context.SaveChanges();
 
             return $"Successfully imported {customers.Count}";
+        }
+        //Task13
+        public static string ImportSales(CarDealerContext context, string inputXml)
+        {
+            IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            }));
+
+            XmlSerializer serializer = new XmlSerializer(typeof(SaleDto[]), new XmlRootAttribute("Sales"));
+
+            StringReader reader = new StringReader(inputXml);
+            SaleDto[] saleDtos = (SaleDto[])serializer.Deserialize(reader);
+            
+            ICollection<Sale> sales = new HashSet<Sale>();
+            foreach (var saleDto in saleDtos)
+            {
+                if (!context.Cars.Any(c => c.Id == saleDto.CarId))
+                {
+                    continue;
+                }
+
+                Sale sale = mapper.Map<Sale>(saleDto);
+                sales.Add(sale);
+            }
+            context.Sales.AddRange(sales);
+            context.SaveChanges();
+
+            return $"Successfully imported {sales.Count}";
         }
     }
 }
