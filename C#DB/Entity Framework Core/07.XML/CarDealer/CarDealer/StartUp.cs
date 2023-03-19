@@ -3,6 +3,7 @@ using CarDealer.Data;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
 using CarDealer.Utilities;
+using Castle.Core.Resource;
 using System.IO;
 using System.Xml.Serialization;
 
@@ -22,8 +23,11 @@ namespace CarDealer
             /*string inputXml = File.ReadAllText(@"../../../Datasets/parts.xml");
             string result = ImportParts(dbContext, inputXml);*/
 
-            string inputXml = File.ReadAllText(@"../../../Datasets/cars.xml");
-            string result = ImportCars(dbContext, inputXml);
+            /*string inputXml = File.ReadAllText(@"../../../Datasets/cars.xml");
+            string result = ImportCars(dbContext, inputXml);*/
+
+            string inputXml = File.ReadAllText(@"../../../Datasets/customers.xml");
+            string result = ImportCustomers(dbContext, inputXml);
 
             Console.WriteLine(result);
         }
@@ -101,6 +105,7 @@ namespace CarDealer
 
             return $"Successfully imported {parts.Count}";
         }
+        //Task11
         public static string ImportCars(CarDealerContext context, string inputXml)
         {
             var serializer = new XmlSerializer(typeof(ImportCarDto[]), new XmlRootAttribute("Cars"));
@@ -130,6 +135,30 @@ namespace CarDealer
             context.SaveChanges();
 
             return $"Successfully imported {cars.Count}";
+        }
+        //Task12
+        public static string ImportCustomers(CarDealerContext context, string inputXml)
+        {
+            IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            }));
+
+            var serializer = new XmlSerializer(typeof(CustomerDto[]), new XmlRootAttribute("Customers"));
+
+            StringReader reader = new StringReader(inputXml);
+            CustomerDto[] customerDtos = (CustomerDto[])serializer.Deserialize(reader);
+
+            ICollection<Customer> customers = new HashSet<Customer>();
+            foreach (var customerDto in customerDtos)
+            {
+                Customer customer = mapper.Map<Customer>(customerDto);
+                customers.Add(customer);
+            }
+            context.Customers.AddRange(customers);
+            context.SaveChanges();
+
+            return $"Successfully imported {customers.Count}";
         }
     }
 }
