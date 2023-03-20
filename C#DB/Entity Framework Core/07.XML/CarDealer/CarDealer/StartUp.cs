@@ -40,7 +40,9 @@ namespace CarDealer
 
             //string result = GetLocalSuppliers(dbContext);
 
-            string result = GetCarsWithTheirListOfParts(dbContext);
+            //string result = GetCarsWithTheirListOfParts(dbContext);
+
+            string result = GetTotalSalesByCustomer(dbContext);
 
             Console.WriteLine(result);
         }
@@ -309,6 +311,42 @@ namespace CarDealer
             XmlSerializer serializer = new XmlSerializer(typeof(CarsWithParts[]), new XmlRootAttribute("cars"));
             StringWriter writer = new StringWriter();
             serializer.Serialize(writer, carsWithParts, namespaces);
+            return writer.ToString();
+        }
+        public static string GetTotalSalesByCustomer(CarDealerContext context)
+        {
+            var customersDb = context.Customers
+               .Where(c => c.Sales.Any())
+               .Select(c => new
+               {
+                   Name = c.Name,
+                   BoughtCars = c.Sales.Count,
+                   Sales = c.Sales.Select(s => new
+                   {
+                       Price = c.IsYoungDriver
+                       ? s.Car.PartsCars.Sum(p => Math.Round((double)p.Part.Price * 0.95, 2))
+                       : s.Car.PartsCars.Sum(p => (double)p.Part.Price)
+                   })
+                   .ToArray()
+               })
+               .ToArray();
+
+            var customers = customersDb
+                .OrderByDescending(c => c.Sales.Sum(s => s.Price))
+                .Select(c => new SalesByCustomer
+                {
+                    Name = c.Name,
+                    BoughtCars = c.BoughtCars,
+                    SpentMoney = c.Sales.Sum(s => s.Price).ToString("f2")
+                })
+                .ToArray();
+
+            XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();
+            namespaces.Add(string.Empty, null);
+
+            XmlSerializer serializer = new XmlSerializer(typeof(SalesByCustomer[]), new XmlRootAttribute("customers"));
+            StringWriter writer = new StringWriter();
+            serializer.Serialize(writer, customers, namespaces);
             return writer.ToString();
         }
     }
