@@ -26,7 +26,9 @@ namespace ProductShop
             /*string inputXml = File.ReadAllText(@"../../../Datasets/categories-products.xml");
             string result = ImportCategoryProducts(context, inputXml);*/
 
-            string result = GetProductsInRange(context);
+            //string result = GetProductsInRange(context);
+
+            string result = GetSoldProducts(context);
 
             Console.WriteLine(result);
         }
@@ -123,6 +125,7 @@ namespace ProductShop
 
             return $"Successfully imported {categoryProducts.Count}";
         }
+        //Task05
         public static string GetProductsInRange(ProductShopContext context)
         {
             var products = context.Products
@@ -146,6 +149,41 @@ namespace ProductShop
             using var writer = new StringWriter();
 
             serializer.Serialize(writer, products, namespaces);
+
+            return writer.ToString();
+        }
+        //Task06
+        public static string GetSoldProducts(ProductShopContext context)
+        {
+            var users = context.Users
+                .Where(u => u.ProductsSold.Any(p => p.Buyer != null))
+                .OrderBy(u => u.LastName)
+                .ThenBy(u => u.FirstName)
+                .Take(5)
+                .Select(u => new UserWithProductsDto()
+                {
+                    FirstName = u.FirstName,
+                    LastName = u.LastName,
+                    products = u.ProductsSold
+                                .Where(p => p.Buyer != null)
+                                .Select(p => new ProductsOnUserDto()
+                                {
+                                    Name = p.Name,
+                                    Price = p.Price
+                                })
+                                .ToArray()
+                })
+                .AsNoTracking()
+                .ToArray();
+
+            var serializer = new XmlSerializer(typeof(UserWithProductsDto[]), new XmlRootAttribute("Users"));
+            var namespaces = new XmlSerializerNamespaces();
+
+            namespaces.Add(string.Empty, null);
+
+            using var writer = new StringWriter();
+
+            serializer.Serialize(writer, users, namespaces);
 
             return writer.ToString();
         }
