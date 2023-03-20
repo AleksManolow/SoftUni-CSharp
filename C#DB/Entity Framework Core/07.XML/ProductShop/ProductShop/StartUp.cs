@@ -15,8 +15,11 @@ namespace ProductShop
             /*string inputXml = File.ReadAllText(@"../../../Datasets/users.xml");
             string result = ImportUsers(context, inputXml);*/
 
-            string inputXml = File.ReadAllText(@"../../../Datasets/products.xml");
-            string result = ImportProducts(context, inputXml);
+            /*string inputXml = File.ReadAllText(@"../../../Datasets/products.xml");
+            string result = ImportProducts(context, inputXml);*/
+
+            string inputXml = File.ReadAllText(@"../../../Datasets/categories.xml");
+            string result = ImportCategories(context, inputXml);
 
             Console.WriteLine(result);
         }
@@ -58,6 +61,26 @@ namespace ProductShop
             context.SaveChanges();
 
             return $"Successfully imported {products.Count}";
+        }
+        //Task03
+        public static string ImportCategories(ProductShopContext context, string inputXml)
+        {
+            IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<ProductShopProfile>();
+            }));
+
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(CategoryDto[]), new XmlRootAttribute("Categories"));
+
+            StringReader reader = new StringReader(inputXml);
+            var categoryDtos = (CategoryDto[])xmlSerializer.Deserialize(reader);
+
+            ICollection<Category> categories = mapper.Map<Category[]>(categoryDtos);
+
+            context.AddRange(categories);
+            context.SaveChanges();
+
+            return $"Successfully imported {categories.Count}";
         }
     }
 }
