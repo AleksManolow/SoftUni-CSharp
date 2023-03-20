@@ -5,6 +5,7 @@ using CarDealer.DTOs.Import;
 using CarDealer.Models;
 using CarDealer.Utilities;
 using Castle.Core.Resource;
+using Microsoft.EntityFrameworkCore;
 using System.IO;
 using System.Xml.Serialization;
 
@@ -33,7 +34,11 @@ namespace CarDealer
             /*string inputXml = File.ReadAllText(@"../../../Datasets/sales.xml");
             string result = ImportSales(dbContext, inputXml);*/
 
-            string result = GetCarsWithDistance(dbContext);
+            //string result = GetCarsWithDistance(dbContext);
+
+            //string result = GetCarsFromMakeBmw(dbContext);
+
+            string result = GetLocalSuppliers(dbContext);
 
             Console.WriteLine(result);
         }
@@ -221,6 +226,56 @@ namespace CarDealer
             var serializer = new XmlSerializer(typeof(CarWithDistanceDto[]), new XmlRootAttribute("cars"));
             using var writer = new StringWriter();
             serializer.Serialize(writer, carDtos, namespaces);
+
+            return writer.ToString();
+        }
+        //Task15
+        public static string GetCarsFromMakeBmw(CarDealerContext context)
+        {
+            var cars = context.Cars
+                .Where(c => c.Make == "BMW")
+                .OrderBy(c => c.Model)
+                .ThenByDescending(c => c.TraveledDistance)
+                .AsNoTracking()
+                .ToArray();
+
+            var carDtos = cars
+                .Select(c => new CarsFromMakeBmw()
+                {
+                    Id = c.Id,
+                    Model = c.Model,
+                    TraveledDistance = c.TraveledDistance
+                })
+                .ToArray();
+
+            var namespaces = new XmlSerializerNamespaces();
+            namespaces.Add(string.Empty, null);
+
+            var serializer = new XmlSerializer(typeof(CarsFromMakeBmw[]), new XmlRootAttribute("cars"));
+            StringWriter writer = new StringWriter();
+            serializer.Serialize(writer, carDtos, namespaces);
+
+            return writer.ToString();
+        }
+        //Task16
+        public static string GetLocalSuppliers(CarDealerContext context)
+        {
+            var suppliers = context.Suppliers
+                .Where(s => !s.IsImporter)
+                .Select(s => new LocalSupplierDto()
+                {
+                    Id = s.Id,
+                    Name = s.Name,
+                    Parts = s.Parts.Count
+                })
+                .ToArray();
+
+            XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();
+            namespaces.Add(string.Empty, null);
+
+            XmlSerializer serializer = new XmlSerializer(typeof(LocalSupplierDto[]), new XmlRootAttribute("suppliers"));
+            StringWriter writer = new StringWriter();
+            serializer.Serialize(writer, suppliers, namespaces);
 
             return writer.ToString();
         }
