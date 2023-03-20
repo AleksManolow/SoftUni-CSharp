@@ -18,8 +18,11 @@ namespace ProductShop
             /*string inputXml = File.ReadAllText(@"../../../Datasets/products.xml");
             string result = ImportProducts(context, inputXml);*/
 
-            string inputXml = File.ReadAllText(@"../../../Datasets/categories.xml");
-            string result = ImportCategories(context, inputXml);
+            /*string inputXml = File.ReadAllText(@"../../../Datasets/categories.xml");
+            string result = ImportCategories(context, inputXml);*/
+
+            string inputXml = File.ReadAllText(@"../../../Datasets/categories-products.xml");
+            string result = ImportCategoryProducts(context, inputXml);
 
             Console.WriteLine(result);
         }
@@ -81,6 +84,40 @@ namespace ProductShop
             context.SaveChanges();
 
             return $"Successfully imported {categories.Count}";
+        }
+        //Task04
+        public static string ImportCategoryProducts(ProductShopContext context, string inputXml)
+        {
+            IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<ProductShopProfile>();
+            }));
+
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(CategoryProductDto[]), new XmlRootAttribute("CategoryProducts"));
+
+            StringReader reader = new StringReader(inputXml);
+            var categoryProductDtos = (CategoryProductDto[])xmlSerializer.Deserialize(reader);
+
+            ICollection<CategoryProduct> categoryProducts = new HashSet<CategoryProduct>();
+
+            foreach (var cpDto in categoryProductDtos)
+            {
+                if (context.Categories.Find(cpDto.CategoryId) == null || context.Products.Find(cpDto.ProductId) == null)
+                {
+                    continue;
+                }
+
+                categoryProducts.Add(new CategoryProduct
+                {
+                    CategoryId = cpDto.CategoryId,
+                    ProductId = cpDto.ProductId
+                });
+            }
+
+            context.CategoryProducts.AddRange(categoryProducts);
+            context.SaveChanges();
+
+            return $"Successfully imported {categoryProducts.Count}";
         }
     }
 }
