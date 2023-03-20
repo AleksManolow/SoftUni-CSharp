@@ -42,7 +42,9 @@ namespace CarDealer
 
             //string result = GetCarsWithTheirListOfParts(dbContext);
 
-            string result = GetTotalSalesByCustomer(dbContext);
+            //string result = GetTotalSalesByCustomer(dbContext);
+
+            string result = GetSalesWithAppliedDiscount(dbContext);
 
             Console.WriteLine(result);
         }
@@ -347,6 +349,37 @@ namespace CarDealer
             XmlSerializer serializer = new XmlSerializer(typeof(SalesByCustomer[]), new XmlRootAttribute("customers"));
             StringWriter writer = new StringWriter();
             serializer.Serialize(writer, customers, namespaces);
+            return writer.ToString();
+        }
+        public static string GetSalesWithAppliedDiscount(CarDealerContext context)
+        {
+            var sales = context.Sales
+                .Include(s => s.Car)
+                .ThenInclude(c => c.PartsCars)
+                .ThenInclude(pc => pc.Part)
+                .Select(s => new SaleDtoTT
+                {
+                    Car = new CarSaleDto
+                    {
+                        Make = s.Car.Make,
+                        Model = s.Car.Model,
+                        TraveledDistance = s.Car.TraveledDistance
+                    },
+                    Discount = s.Discount,
+                    CustomerName = s.Customer.Name,
+                    Price = s.Car.PartsCars.Sum(p => p.Part.Price).ToString("f2"),
+                    PriceWithDiscount = Math.Round((double)(s.Car.PartsCars
+                    .Sum(p => p.Part.Price) * (1 - (s.Discount / 100))), 4)
+                    .ToString()
+                })
+                .ToArray();
+
+            var namespaces = new XmlSerializerNamespaces();
+            namespaces.Add(string.Empty, null);
+            var serializer = new XmlSerializer(typeof(SaleDtoTT[]), new XmlRootAttribute("sales"));
+            using var writer = new StringWriter();
+            serializer.Serialize(writer, sales, namespaces);
+
             return writer.ToString();
         }
     }
