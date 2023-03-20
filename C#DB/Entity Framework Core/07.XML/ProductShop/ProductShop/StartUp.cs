@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using ProductShop.Data;
+using ProductShop.DTOs.Export;
 using ProductShop.DTOs.Import;
 using ProductShop.Models;
 using System.Xml.Serialization;
@@ -21,8 +23,10 @@ namespace ProductShop
             /*string inputXml = File.ReadAllText(@"../../../Datasets/categories.xml");
             string result = ImportCategories(context, inputXml);*/
 
-            string inputXml = File.ReadAllText(@"../../../Datasets/categories-products.xml");
-            string result = ImportCategoryProducts(context, inputXml);
+            /*string inputXml = File.ReadAllText(@"../../../Datasets/categories-products.xml");
+            string result = ImportCategoryProducts(context, inputXml);*/
+
+            string result = GetProductsInRange(context);
 
             Console.WriteLine(result);
         }
@@ -86,7 +90,7 @@ namespace ProductShop
             return $"Successfully imported {categories.Count}";
         }
         //Task04
-        public static string ImportCategoryProducts(ProductShopContext context, string inputXml)
+        public static string GetProductsInRange(ProductShopContext context, string inputXml)
         {
             IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
             {
@@ -118,6 +122,32 @@ namespace ProductShop
             context.SaveChanges();
 
             return $"Successfully imported {categoryProducts.Count}";
+        }
+        public static string GetProductsInRange(ProductShopContext context)
+        {
+            var products = context.Products
+                .Where(p => p.Price >= 500 && p.Price <= 1000)
+                .OrderBy(p => p.Price)
+                .Take(10)
+                .Include(p => p.Buyer)
+                .Select(p => new ProductsInRangeDto()
+                {
+                    Name = p.Name,
+                    Price = p.Price,
+                    BuyerFullName = $"{p.Buyer.FirstName} " + p.Buyer.LastName
+                })
+                .ToArray();
+
+            var namespaces = new XmlSerializerNamespaces();
+            namespaces.Add(string.Empty, null);
+
+
+            var serializer = new XmlSerializer(typeof(ProductsInRangeDto[]), new XmlRootAttribute("Products"));
+            using var writer = new StringWriter();
+
+            serializer.Serialize(writer, products, namespaces);
+
+            return writer.ToString();
         }
     }
 }
