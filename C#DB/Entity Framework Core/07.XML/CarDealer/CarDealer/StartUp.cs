@@ -38,7 +38,9 @@ namespace CarDealer
 
             //string result = GetCarsFromMakeBmw(dbContext);
 
-            string result = GetLocalSuppliers(dbContext);
+            //string result = GetLocalSuppliers(dbContext);
+
+            string result = GetCarsWithTheirListOfParts(dbContext);
 
             Console.WriteLine(result);
         }
@@ -277,6 +279,36 @@ namespace CarDealer
             StringWriter writer = new StringWriter();
             serializer.Serialize(writer, suppliers, namespaces);
 
+            return writer.ToString();
+        }
+        //Task17
+        public static string GetCarsWithTheirListOfParts(CarDealerContext context)
+        {
+            var carsWithParts = context.Cars
+                .OrderByDescending(c => c.TraveledDistance)
+                .ThenBy(c => c.Model)
+                .Take(5)
+                .Select(c => new CarsWithParts()
+                {
+                    Make = c.Make,
+                    Model = c.Model,
+                    TraveledDistance = c.TraveledDistance,
+                    Parts = c.PartsCars
+                            .OrderByDescending(p => p.Part.Price)
+                            .Select(p => new PartsOnCar()
+                            {
+                                Name = p.Part.Name,
+                                Price = p.Part.Price
+                            })
+                            .ToArray()
+                })
+                .ToArray();
+            XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();
+            namespaces.Add(string.Empty, null);
+
+            XmlSerializer serializer = new XmlSerializer(typeof(CarsWithParts[]), new XmlRootAttribute("cars"));
+            StringWriter writer = new StringWriter();
+            serializer.Serialize(writer, carsWithParts, namespaces);
             return writer.ToString();
         }
     }
