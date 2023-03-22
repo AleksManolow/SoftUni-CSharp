@@ -23,16 +23,16 @@ namespace Footballers
 
             ResetDatabase(context, shouldDropDatabase: true);
 
-            /*var projectDir = GetProjectDirectory();
+            var projectDir = GetProjectDirectory();
 
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
 
-            ExportEntities(context, projectDir + @"ExportResults/");
+            //ExportEntities(context, projectDir + @"ExportResults/");
 
             using (var transaction = context.Database.BeginTransaction())
             {
                 transaction.Rollback();
-            }*/
+            }
         }
 
         private static void ImportEntities(FootballersContext context, string baseDir, string exportDir)
@@ -44,7 +44,7 @@ namespace Footballers
             PrintAndExportEntityToFile(coaches, exportDir + "Actual Result - ImportCoaches.txt");
 
             var teams =
-             DataProcessor.Deserializer.ImportTeams(context,
+            DataProcessor.Deserializer.ImportTeams(context,
                  File.ReadAllText(baseDir + "teams.json"));
 
             PrintAndExportEntityToFile(teams, exportDir + "Actual Result - ImportTeams.txt");
