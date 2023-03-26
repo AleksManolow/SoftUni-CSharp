@@ -14,13 +14,13 @@ namespace TeisterMask.Data.Models
         [Required]
         [MinLength(3)]
         [MaxLength(40)]
-        [RegularExpression("[A-Za-z0-9]")]
+        [RegularExpression(@"^[A-Za-z0-9]+$")]
         public string Username { get; set; } = null!;
         [Required]
-        [EmailAddress]
+        [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$")]
         public string Email { get; set; } = null!;
         [Required]
-        [RegularExpression(@"^[0-9]{3}-[0-9]{3}-[0-9]{4}$")]
+        [RegularExpression(@"^\d{3}-\d{3}-\d{4}$")]
         public string Phone { get; set; } = null!;
 
 
