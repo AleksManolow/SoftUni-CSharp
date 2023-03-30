@@ -25,7 +25,6 @@ namespace SoftJail.Data.Models
         [Required]
         public DateTime IncarcerationDate { get; set; }
         public DateTime ReleaseDate { get; set; }
-        [Required]
         [Range(0, double.MaxValue)]
         public decimal Bail { get; set; }
 
