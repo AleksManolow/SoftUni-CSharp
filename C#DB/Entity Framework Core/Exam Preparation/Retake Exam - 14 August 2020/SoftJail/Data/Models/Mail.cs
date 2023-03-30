@@ -16,7 +16,6 @@ namespace SoftJail.Data.Models
 
         [Required, ForeignKey(nameof(Prisoner))]
         public int PrisonerId { get; set; }
-        [Required]
         public virtual Prisoner Prisoner { get; set; } = null!;
     }
 }

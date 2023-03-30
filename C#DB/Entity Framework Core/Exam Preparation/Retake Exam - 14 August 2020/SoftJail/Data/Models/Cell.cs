@@ -19,7 +19,6 @@ namespace SoftJail.Data.Models
 
         [Required, ForeignKey(nameof(Department))]
         public int DepartmentId { get; set; }
-        [Required]
         public virtual Department Department { get; set; } = null!;
 
         public virtual ICollection<Prisoner> Prisoners { get; set; } 

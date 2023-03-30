@@ -22,12 +22,11 @@ namespace SoftJail.Data.Models
         public Position Position { get; set; }
         [Required]
         public Weapon Weapon { get; set; }
+
         [Required, ForeignKey(nameof(Department))]
         public int DepartmentId { get; set; }
-        [Required]
         public virtual Department Department { get; set; } = null!;
 
-        [InverseProperty(nameof(OfficerPrisoner.Officer))]
         public virtual ICollection<OfficerPrisoner> OfficerPrisoners { get; set; }
     }
 }

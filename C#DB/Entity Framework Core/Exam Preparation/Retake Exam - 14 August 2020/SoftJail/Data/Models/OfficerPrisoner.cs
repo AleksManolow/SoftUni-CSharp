@@ -5,14 +5,12 @@ namespace SoftJail.Data.Models
 {
     public class OfficerPrisoner
     {
-        [ForeignKey(nameof(Prisoner))]
+        [Required, ForeignKey(nameof(Prisoner))]
         public int PrisonerId { get; set; }
-        [Required]
         public virtual Prisoner Prisoner { get; set; } = null!;
 
-        [ForeignKey(nameof(Officer))]
+        [Required, ForeignKey(nameof(Officer))]
         public int OfficerId { get; set; }
-        [Required]
         public virtual Officer Officer { get; set; } = null!;
     }
 }

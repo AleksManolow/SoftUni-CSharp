@@ -24,19 +24,15 @@ namespace SoftJail.Data.Models
         public int Age { get; set; }
         [Required]
         public DateTime IncarcerationDate { get; set; }
-        public DateTime ReleaseDate { get; set; }
-        [Range(0, double.MaxValue)]
-        public decimal Bail { get; set; }
+        public DateTime? ReleaseDate { get; set; }
+        public decimal? Bail { get; set; }
 
         [ForeignKey(nameof(Cell))]
-        public int CellId { get; set; }
-        public virtual Cell? Cell { get; set; }
+        public int? CellId { get; set; }
+        public virtual Cell Cell { get; set; }
 
-        [InverseProperty(nameof(Mail.Prisoner))]
         public virtual ICollection<Mail> Mails { get; set; }
 
-
-        [InverseProperty(nameof(OfficerPrisoner.Prisoner))]
         public virtual ICollection<OfficerPrisoner> PrisonerOfficers { get; set; }
     }
 }
