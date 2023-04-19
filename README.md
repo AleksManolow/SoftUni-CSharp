@@ -84,6 +84,8 @@
 3. [**Entity Relations**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/03.Entity%20Relations)
 4. [**LINQ**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/04.LINQ)
 5. [**Advanced Querying**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/05.Advanced%20Querying)
+6. [**JSON**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/06.JSON)
+7. [**XML**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/07.XML)
   </details>
   
 ***
