@@ -98,6 +98,7 @@ Here you can find exam problems I used for practice:
 3. [**Advanced**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Advanced/Exam%20Preparations)
 4. [**OOP**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/Exam%20Preparation)
 5. [**MS SQL**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/MS%20SQl/Exam%20Preparation)
+6. [**Entity Framework Core**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/Exam%20Preparation)
   </details>
   
 ***
