@@ -1,0 +1,105 @@
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.navigation{
+    padding: 0 20px;
+}
+.navigation p{
+    display: inline-block;
+    font-size: 22px;
+    width: 629px;
+} 
+.navigation p span{
+    color: #50b9e1;
+}
+nav{
+    display: inline-block;
+}
+li {
+    display: inline-block;
+    padding-right: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+nav i{
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+}
+.navigation > header:nth-child(1) > nav:nth-child(2) > ul:nth-child(1) > li:nth-child(6){
+    padding-left: 0px;
+}
+ul{
+    padding: 0px;
+}
+a:hover{
+    color: #50b9e1;
+    cursor: pointer;
+}
+/* side-header */
+.site-header{
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(../Requirements-and-Resources/Images/kids_main.jpg), no-repeat, center;
+    background-size: cover;
+}
+.site-header h1{
+    font-size: 66px;
+    color: white;
+    width: 45%;
+    margin: 0;
+    padding: 300px 0 80px 100px;
+}
+.site-header button{
+    font-size: 26px;
+    background: transparent;
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 0 100px 100px;
+}
+.site-header button:hover{
+    background: #50b9e1;
+    border: 2px solid #50b9e1;
+    cursor: pointer;
+}
+/* welcome */
+.welcome{
+    color: #5a7c8a;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+h2{
+    text-align: center;
+    font-family: serif;
+    font-size: 32px;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+.welcome p{
+    text-align: center;
+}
+/* offerts */
+.offerts{
+    background: #50b9e1;
+    font-family: serif;
+    color: white;
+    padding: 20px 30px;
+}
+.offerts img{
+    width: 50px;
+}
+.offerts li{
+    width: 28%;
+    text-align: center;
+    padding: 20px 30px;
+}
+.offerts a{
+    color: white;
+}
