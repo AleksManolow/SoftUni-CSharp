@@ -103,3 +103,29 @@ h2{
 .offerts a{
     color: white;
 }
+/* camps */
+.camps{
+    color: #5a7c8a;
+    padding: 20px 0;
+}
+body > main > section.camps > p{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.camps img{
+    width: 400px;
+    height: 250px;
+}
+.camps li{
+    width: 400px;
+}
+.info div{
+    display: inline-block;
+}
+.info div p,
+.info div h3{
+    margin: 0;
+    padding: 0;
+}
