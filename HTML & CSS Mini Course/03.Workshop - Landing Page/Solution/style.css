@@ -129,3 +129,13 @@ body > main > section.camps > p{
     margin: 0;
     padding: 0;
 }
+.more-info button:hover{
+    background: #50b9e1;
+}
+/* footer */
+footer{
+    background: #50b9e1;
+    padding: 25px 100px;
+    font-family: serif;
+    height: 25px;
+}
