@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextSplitterApp", "TextSplitterApp\TextSplitterApp.csproj", "{0BAF121F-7F48-40CA-8313-F848699C6E88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BAF121F-7F48-40CA-8313-F848699C6E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BAF121F-7F48-40CA-8313-F848699C6E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BAF121F-7F48-40CA-8313-F848699C6E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BAF121F-7F48-40CA-8313-F848699C6E88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3FDCA464-4A9F-44E6-AD9E-A1FB2E7ECE6D}
+	EndGlobalSection
+EndGlobal
