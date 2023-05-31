@@ -6,11 +6,11 @@ namespace ForumApp.Models
 	public class PostFormModel
 	{
 		[Required]
-		[StringLength(50, MinimumLength = TitleMinLength)]
+		[StringLength(TitleMaxLength, MinimumLength = TitleMinLength)]
 		public string Title { get; set; } = null!;
 
 		[Required]
-		[StringLength(1500, MinimumLength = ContentMinLength)]
+		[StringLength(ContentMaxLength, MinimumLength = ContentMinLength)]
 		public string Content { get; set; } = null!;
 	}
 }
