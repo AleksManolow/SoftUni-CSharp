@@ -46,5 +46,38 @@ namespace ForumApp.Controllers
 
 			return RedirectToAction("All");
 		}
+
+		public async Task<IActionResult> Edit(int id)
+		{
+			var post = await _data.Posts.FindAsync(id);
+
+			return View(new PostFormModel()
+			{
+				Title = post.Title,
+				Content = post.Content
+			});
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> Edit(int id, PostFormModel model)
+		{
+			var post = await _data.Posts.FindAsync(id);
+
+			post.Title = model.Title;
+			post.Content = model.Content;
+
+			await _data.SaveChangesAsync();
+			return RedirectToAction("All");
+		}
+		[HttpPost]
+		public async Task<IActionResult> Delete(int id)
+		{
+			var post = await _data.Posts.FindAsync(id);
+
+			_data.Posts.Remove(post);
+			await _data.SaveChangesAsync();
+
+			return RedirectToAction("All");
+		}
 	}
 }
