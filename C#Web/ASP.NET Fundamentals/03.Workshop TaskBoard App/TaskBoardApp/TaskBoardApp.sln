@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskBoardApp", "TaskBoardApp\TaskBoardApp.csproj", "{794B034A-CC69-4ED9-9328-612E0E5DD82F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskBoardApp", "TaskBoardApp\TaskBoardApp.csproj", "{FEF15EA4-CAA6-48EF-8EDE-1A60A688C853}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{794B034A-CC69-4ED9-9328-612E0E5DD82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{794B034A-CC69-4ED9-9328-612E0E5DD82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{794B034A-CC69-4ED9-9328-612E0E5DD82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{794B034A-CC69-4ED9-9328-612E0E5DD82F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEF15EA4-CAA6-48EF-8EDE-1A60A688C853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF15EA4-CAA6-48EF-8EDE-1A60A688C853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF15EA4-CAA6-48EF-8EDE-1A60A688C853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF15EA4-CAA6-48EF-8EDE-1A60A688C853}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {584D7FA6-FEEF-4A2F-BA69-C7236A4876F1}
+		SolutionGuid = {1A58F7F8-34B6-423B-8734-53B2C2E015D0}
 	EndGlobalSection
 EndGlobal
