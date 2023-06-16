@@ -51,9 +51,7 @@ namespace Contacts.Controllers
 
         public IActionResult All()
         {
-            var allContacts = new AllContactsQueryModel()
-            {
-                Contacts = _context.Contacts
+            var contacts = _context.Contacts
                     .Select(c => new ContactViewModel()
                     {
                         Id = c.Id,
@@ -64,8 +62,8 @@ namespace Contacts.Controllers
                         Address = c.Address,
                         Website = c.Website
                     })
-            };
-            return View(allContacts);
+                    .ToList();
+            return View(contacts);
         }
 
         public IActionResult Edit(int id)

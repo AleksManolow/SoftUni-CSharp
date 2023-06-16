@@ -1,4 +1,4 @@
-﻿@model AllContactsQueryModel
+﻿@model IEnumerable<ContactViewModel>
 
 @{
     ViewBag.Title = "All Contacts";
@@ -22,7 +22,7 @@
             </tr>
         </thead>
         <tbody class="table-group-divider">
-            @foreach (var contact in Model.Contacts)
+            @foreach (var contact in Model)
             {
                 <tr>
                     <th scope="row"></th>
