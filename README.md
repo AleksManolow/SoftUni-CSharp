@@ -87,6 +87,15 @@
 6. [**JSON**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/06.JSON)
 7. [**XML**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/07.XML)
   </details>
+
+  ***
+ <details>
+ <summary><h3>ASP.NET Fundamentals Carriculum List</summary>
+ 
+1. [**ASP.NET Core Introduction**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Web/ASP.NET%20Fundamentals/01.ASP.NET%20Core%20Introduction)
+2. [**ASP.NET and Databases**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Web/ASP.NET%20Fundamentals/02.Workshop%20Forum%20App/ForumApp)
+3. [**ASP.NET Identity**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Web/ASP.NET%20Fundamentals/03.Workshop%20TaskBoard%20App/TaskBoardApp)
+  </details>
   
 ***
  <details>
