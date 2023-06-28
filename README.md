@@ -108,6 +108,7 @@ Here you can find exam problems I used for practice:
 4. [**OOP**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/Exam%20Preparation)
 5. [**MS SQL**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/MS%20SQl/Exam%20Preparation)
 6. [**Entity Framework Core**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/Exam%20Preparation)
+7. [**ASP.NET Fundamentals**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Web/ASP.NET%20Fundamentals/Exam%20Preparation)
   </details>
   
 ***
@@ -120,6 +121,7 @@ Here you can find exam problems I used for practice:
  4. [**OOP**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23OOP/Exam)
  5. [**MS SQL**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/MS%20SQl/Exam)
  6. [**Entity Framework Core**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23DB/Entity%20Framework%20Core/Exam)
+ 7. [**ASP.NET Fundamentals**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Web/ASP.NET%20Fundamentals/Exam)
  </details>
  
  ***
