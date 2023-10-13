@@ -3,40 +3,81 @@
     using System;
     using System.Collections;
     using System.Collections.Generic;
+    using System.Linq;
 
     public class CircularQueue<T> : IAbstractQueue<T>
     {
-        public int Count => throw new NotImplementedException();
+        private T[] elements;
+        private int startIndex, endIndex;
+        public CircularQueue(int capacity = 4)
+        {
+            this.elements = new T[capacity];
+            this.Count = 0;
+        }
+        public int Count { get; private set; }
 
         public T Dequeue()
         {
-            throw new NotImplementedException();
+            if (this.Count == 0)
+            {
+                throw new IndexOutOfRangeException("Invalid");
+            }
+            T oddElement = this.elements[startIndex];
+            this.startIndex = (startIndex + 1) % this.elements.Length;
+            this.Count--;
+            return oddElement;
         }
 
         public void Enqueue(T item)
         {
-            throw new NotImplementedException();
+            if (this.Count >= this.elements.Length)
+            {
+                this.Grow();
+            }
+            this.elements[this.endIndex] = item;
+            this.endIndex = (this.endIndex + 1) % this.elements.Length;
+            this.Count++;
         }
 
-        public IEnumerator<T> GetEnumerator()
+        private void Grow()
         {
-            throw new NotImplementedException();
+            this.elements = this.CopyElemets(new T[this.elements.Length * 2]);
+            this.startIndex = 0;
+            this.endIndex = this.Count;
+        }
+
+        private T[] CopyElemets(T[] resultArr)
+        {
+            for (int i = 0; i < this.Count; i++)
+            {
+                resultArr[i] = this.elements[(startIndex + i) % this.elements.Length];
+            }
+            return resultArr;
         }
 
         public T Peek()
         {
-            throw new NotImplementedException();
+            if (this.Count == 0)
+            { 
+                throw new IndexOutOfRangeException("Invalid");
+            }
+            return elements[this.startIndex];
         }
 
         public T[] ToArray()
         {
-            throw new NotImplementedException();
+            return this.CopyElemets(new T[this.Count]);
+        }
+        public IEnumerator<T> GetEnumerator()
+        {
+            for (int i = 0; i < this.Count; i++)
+            {
+                yield return this.elements[(this.startIndex + i) % this.elements.Length];
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+            => GetEnumerator();
     }
 
 }
