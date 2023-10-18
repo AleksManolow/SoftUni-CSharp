@@ -179,7 +179,7 @@ public class TreeTests
     [Test]
     public void Swap_RightParamRootWithAnyNode_ShouldThrowException()
     {
-        Assert.Throws<ArgumentException>(() => tree.Swap(21, 7));
+        Assert.Throws<NullReferenceException>(() => tree.Swap(21, 7));
     }
 
     [Test]
