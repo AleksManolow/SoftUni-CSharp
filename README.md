@@ -96,8 +96,8 @@
 2. [**ASP.NET and Databases**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Web/ASP.NET%20Fundamentals/02.Workshop%20Forum%20App/ForumApp)
 3. [**ASP.NET Identity**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Web/ASP.NET%20Fundamentals/03.Workshop%20TaskBoard%20App/TaskBoardApp)
   </details>
-  Data Structures Fundamentals
-    ***
+  
+  ***
  <details>
   
  <summary><h3>Data Structures Fundamentals Carriculum List</summary>
