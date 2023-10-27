@@ -7,7 +7,12 @@
     {
         public Tree(T key, params Tree<T>[] children)
         {
-            throw new NotImplementedException();
+            this.Key = key;
+            foreach (var child in children)
+            {
+                child.Parent = this;
+                
+            }
         }
 
         public T Key { get; private set; }
