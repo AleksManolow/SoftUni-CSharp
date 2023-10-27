@@ -97,6 +97,16 @@
 3. [**ASP.NET Identity**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Web/ASP.NET%20Fundamentals/03.Workshop%20TaskBoard%20App/TaskBoardApp)
   </details>
   
+  ***
+ <details>
+  
+ <summary><h3>Data Structures Fundamentals Carriculum List</summary>
+ 
+1. [**Linear Data Structures**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Data%20Structures/Fundamentals/01.Linear%20Data%20Structures)
+2. [**Trees Representation and Traversal (BFS, DFS)**](https://github.com/AleksManolow/SoftUni-CSharp/tree/main/C%23Data%20Structures/Fundamentals/02.Trees%20Representation%20and%20Traversal%20(BFS%2C%20DFS))
+3. [**Heaps, BST**]()
+  </details>
+  
 ***
  <details>
  <summary><h3>Exam Practice Problems</summary>
