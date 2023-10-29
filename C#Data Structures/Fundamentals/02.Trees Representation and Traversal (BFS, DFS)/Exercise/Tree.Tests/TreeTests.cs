@@ -20,14 +20,14 @@ namespace Tree.Tests
 
             string expectedOutput =
                 $"7{Environment.NewLine}" +
-                $"  19{Environment.NewLine}" +
-                $"    1{Environment.NewLine}" +
-                $"    12{Environment.NewLine}" +
-                $"    31{Environment.NewLine}" +
-                $"  21{Environment.NewLine}" +
-                $"  14{Environment.NewLine}" +
-                $"    23{Environment.NewLine}" +
-                $"    6";
+                $" 19{Environment.NewLine}" +
+                $"  1{Environment.NewLine}" +
+                $"  12{Environment.NewLine}" +
+                $"  31{Environment.NewLine}" +
+                $" 21{Environment.NewLine}" +
+                $" 14{Environment.NewLine}" +
+                $"  23{Environment.NewLine}" +
+                $"  6";
 
             Assert.AreEqual(expectedOutput, tree.AsString());
         }
