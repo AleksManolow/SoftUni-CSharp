@@ -13,7 +13,10 @@
 
             var tree = treeFactiory.CreateTreeFromStrings(input);
 
-            Console.WriteLine(string.Join(" ", tree.GetLongestPath()));
+            foreach (var item in tree.GetPathsWithGivenSum(27))
+            {
+                Console.WriteLine(string.Join(" ", item));
+            }
         }
     }
 }
